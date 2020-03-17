@@ -1,172 +1,18 @@
-@charset "utf-8";
+/*=========================
+project vars
+=========================*/
+$theme:#262c33;
+$base:#ececec;
+$primary:#7f549d;
 
-/*
-* theme/_theme.scss
-*/
-
-/*=================================
-Base Layout Vars
-=================================*/
-
-$body-margin: 30px;
-$responsive-min: 559px;
-$responsive-max: 1180px;
-
-/*=================================
-Base Text Vars
-=================================*/
-
-//font-size vars
-$base-fsize: 62.5%;
-$f10: 1rem;
-$f12: 1.2rem;
-$f14: 1.4rem;
-$f16: 1.6rem;
-$f20: 2rem;
-$f24: 2.4rem;
-$f28: 2.8rem;
-$f32: 3.2rem;
-
-//font-size & line-height
-@mixin text($fs) {
-    font-size: $fs;
-    line-height: ($fs * 1.75);
-}
-
-//font-family
-@mixin ff {
-
-    font-family: "HiraginoSans-W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
-
-}
-
-/*=================================
-desigin Vars
-=================================*/
-
-//space
-$s4: 0.4rem;
-$s8: 0.8rem;
-$s16: 1.6rem;
-$s24: 2.4rem;
-$s28: 2.8rem;
-$s32: 3.2rem;
-$s40: 4rem;
-$vw100: 100vw;
-$vh100: 100vh;
-
-//radius
-$r8: 0.8rem;
-$r10: 1rem;
-$r100: 10rem;
-$r200: 20rem;
-
-//radius
-@mixin radius($r) {
-    border-radius: $r;
-}
-
-/*=================================
-Colors Vars
-=================================*/
-
-$white:#fff;
-$black: #000;
-$lightGray: #e8e8e8;
-$gray: #ccc;
-$darkGray: #515151;
-
-$theme:#193489;
-$sub1:#62cff7;
-$sub2:#cbf762;
-$strong1: #c11212;
-$strong2: #ff8003;
-$primary:#62cff7;
-$phover:#aae7fd;
-$secondary:#fff;
-$shover:#e8e8e8;
-
-$link:#193489;
-$lhover:#2c8fe6;
-
-$border:$lightGray;
-
-/*=================================
-layout Vars
-=================================*/
-//responsive
-@mixin res {
-
-    @media screen and (max-width:$responsive-min) {
-
-        @content;
-    }
-}
-
-//container
-@mixin container {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    min-width: $responsive-min;
-    max-width: $responsive-max;
-}
-
-//image
-@mixin img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-//flex
-@mixin flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-//absolute
-@mixin abs($t:"", $b:"", $l:"", $r:"") {
-
-    position: absolute;
-
-    @if $t !="" {
-        top: $t;
-    }
-
-    @if $b !="" {
-        bottom: $b;
-    }
-
-    @if $l !="" {
-        left: $l;
-    }
-
-    @if $r !="" {
-        right: $r;
-    }
-}
+$radius: 0.8rem;
 
 
-//fixed
-
-@mixin fix($t:"", $b:"", $l:"", $r:"") {
-
-    position: fixed;
-
-    @if $t !="" {
-        top: $t;
-    }
-
-    @if $b !="" {
-        bottom: $b;
-    }
-
-    @if $l !="" {
-        left: $l;
-    }
-
-    @if $r !="" {
-        right: $r;
-    }
+/*=========================
+base
+=========================*/
+@mixin base {
+    @include ff;
+    @include textFactory($f16,$white,"medium");
+    @include containerFactory($base, 0, 26px 0 0 0);
 }

@@ -1,0 +1,89 @@
+/*=========================
+font mixins
+=========================*/
+@mixin ff {
+  font-family: 'Noto Sans JP',"HiraginoSans-W3", "Hiragino Kaku Gothic ProN",
+    "Hiragino Kaku Gothic Pro", "游ゴシック Medium", YuGothic, YuGothicM,
+    メイリオ, Meiryo, sans-serif;
+}
+
+@mixin heavy{
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin bold{
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin medium{
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin regular{
+ 
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin en {
+  font-family: jaf-mashine, sans-serif; 
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*=================================
+Base Layout Vars
+=================================*/
+
+$responsive-min: 559px;
+$responsive-max: 1180px;
+
+//responsive
+@mixin responsive($w) {
+  @media screen and (max-width: $w) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $responsive-min) {
+    @content;
+  }
+}
+
+/*=========================
+sass fanction
+=========================*/
+
+@mixin textFactory($f,$c,$style){
+
+  font-size: $f;
+  line-height: $f * 1.75;
+  color:$c;
+
+  @if $style == "heavy" {
+    @include heavy;  
+  }
+  @if $style == "bold" {
+    @include bold;  
+  }
+  @if $style == "medium" {
+    @include medium;  
+  }
+  @if $style == "regular" {
+    @include regular;  
+  }
+  @if $style == "en" {
+    @include en;  
+  }
+}
+
+@mixin containerFactory($c,$r,$p){
+
+  background-color: $c;
+  border-radius: $r;
+  padding: $p;
+}

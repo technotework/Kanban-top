@@ -8,8 +8,8 @@ html {
 }
 
 body {
-    @include text($f16);
-    @include ff;
+   @include base;
+
 }
 
 * {

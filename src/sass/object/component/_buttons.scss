@@ -4,24 +4,17 @@
 * object/component/_buttons.scss
 */
 a {
-    color: $link;
-    text-decoration: none;
 }
 
 a:visited {
-    color: $link;
 }
 
 a:hover,
 a:active {
 
-    color: $lhover;
 }
 
 c-button {
 
-    display: block;
-    padding: $s4 $s16;
-    border: solid 1px $border;
-    @include radius(r8);
+  
 }
