@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/*
+* foundation/_base.scss
+*/
+html {
+    font-size: $base-fsize;
+}
+
+body {
+    @include text($f16);
+    @include ff;
+}
+
+* {
+    box-sizing: border-box;
+}
