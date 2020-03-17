@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "webpack",
     "serve": "npm run dev & npx webpack-dev-server",
-    "dev": "webpack --mode development --watch --hide-modules"
+    "dev": "webpack --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
