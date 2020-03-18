@@ -87,3 +87,11 @@ sass fanction
   border-radius: $r;
   padding: $p;
 }
+
+/*=========================
+shadow
+=========================*/
+
+@mixin shadow {
+  box-shadow: 0 0 $shadowLength rgba(0, 0, 0,$shadowOpacity);
+}

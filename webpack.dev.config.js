@@ -8,5 +8,6 @@ module.exports = merge(baseConfig, {
     open: true,
     port: 9000,
     contentBase: './public'
-  }
+  },
+  watch: true
 });
