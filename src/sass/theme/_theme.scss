@@ -14,5 +14,5 @@ base
 @mixin base {
     @include ff;
     @include textFactory($f16,$white,"medium");
-    @include containerFactory($base, 0, 26px 0 0 0);
+    @include containerFactory($base, 0, 0 0 0 0);
 }

@@ -4,7 +4,7 @@ import * as THREE from 'three';
 //init
 window.addEventListener("DOMContentLoaded", init);
 
-let renderer, box, scene, camera, w, h;
+let renderer, box1, box2, scene, camera, w, h;
 
 /**
  * 初期化
@@ -32,29 +32,35 @@ function init3D() {
 
   //CAMERA
   camera = new THREE.PerspectiveCamera(
-    45,
+    35,
     w / h,
     1,
-    10000
+    8000
   );
-  camera.position.set(0, 0, +6000);
+  camera.position.set(0, 700, +7000);
 
   //SIZE
   onResize();
 
   //BOX
-  let geometry = new THREE.BoxGeometry(500, 500, 500);
+  let geometry1 = new THREE.DodecahedronGeometry(2500);
+  let geometry2 = new THREE.DodecahedronGeometry(1500);
   let material = new THREE.MeshStandardMaterial({
     color: 0xececec
   });
-  box = new THREE.Mesh(geometry, material);
-  scene.add(box);
+  box1 = new THREE.Mesh(geometry1, material);
+  scene.add(box1);
+  box1.position.set(-4000, -1000, 0);
+
+  box2 = new THREE.Mesh(geometry2, material);
+  scene.add(box2);
+  box2.position.set(3000, 2000, 0);
 
   //LIGHT
-  let directionLight = new THREE.DirectionalLight(0xffffff, 0.2);
+  let directionLight = new THREE.DirectionalLight(0xcccccc, 0.3);
   scene.add(directionLight);
-  directionLight.position.set(1, 1, 1);
-  let ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.7);
+  directionLight.position.set(0, 100, 100);
+  let ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.8);
   scene.add(ambientLight);
 
   renderer.render(scene, camera);
@@ -67,8 +73,11 @@ function tick() {
 
   requestAnimationFrame(tick);
 
-  box.rotation.x += 0.01;
-  box.rotation.y += 0.01;
+  box1.rotation.x += 0.0025;
+  box1.rotation.y += 0.0025;
+
+  box2.rotation.x -= 0.0025;
+  box2.rotation.y -= 0.0025;
 
   // レンダリング
   renderer.render(scene, camera);
@@ -82,7 +91,7 @@ function tick() {
 function onResize() {
 
   w = window.innerWidth;
-  h = 500;
+  h = 800;
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(w, h);
   camera.aspect = w / h;
