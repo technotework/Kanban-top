@@ -34,23 +34,4 @@
     }
   }
 
-  &__decoration{
-    
-    position: relative;
-    display: block;
-    width: 100%;
-    padding-top: 568px;
-    overflow: hidden;
-
-    &::before{
-      content: "";
-      position: absolute;
-      top:566px;
-      transform-origin:0 0;
-      transform:rotate(-13deg) skewX(-13deg); 
-      width: 120vw;
-      height: 445px;
-      background-color: $theme;
-    }
-  }
 }
