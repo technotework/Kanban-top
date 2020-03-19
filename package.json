@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "serve": "webpack-dev-server --open --config webpack.dev.config.js",
+    "serve": "webpack-dev-server --config webpack.dev.config.js",
     "dev": "webpack --config webpack.dev.config.js --watch",
     "build": "webpack --config webpack.prod.config.js"
   },

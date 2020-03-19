@@ -7,7 +7,9 @@ module.exports = merge(baseConfig, {
   devServer: {
     open: true,
     port: 9000,
-    contentBase: './public'
-  },
-  watch: true
+    contentBase: 'public',
+    publicPath: '/js/',
+    hot: true,
+    watchContentBase: true
+  }
 });
