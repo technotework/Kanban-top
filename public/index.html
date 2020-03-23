@@ -19,20 +19,30 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header class="p-mainVisual">
-        <canvas id="top"></canvas>
+<body class="p-body">
+    <header class="p-header">
+        <div class="p-header__bgVisual">
+            <canvas id="top"></canvas>
+        </div>
     </header>
 
 
     <main class="p-main">
-
-        <img src="/images/logo.png" alt="KANBAN" class="p-main__logo">
-        <div class="p-main__screen">
-            <img src="/images/dammy.jpg" alt="dammy" class="u-resImg">
+        <h1 class="p-main__logo u-center">
+            <img src="/images/logo.png" alt="KANBAN" class="u-resImg" />
+        </h1>
+        <a href="#" class="p-main__gitLink u-hover">
+            <img src="/images/git.png" alt="LinkToGit" class="u-resImg" />
+        </a>
+        <div class="p-main__screen u-center">
+            <img src="/images/dammy.jpg" alt="dammy" class="u-resImg" />
         </div>
-        <article class="p-article">
-            aaaaa
+        <article class="p-article u-center u-mt45">
+            <div class="l-button_list">
+                <a href="" class="c-button__primary">
+                    START DEMO
+                </a>
+            </div>
         </article>
 
     </main>

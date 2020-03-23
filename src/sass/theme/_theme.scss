@@ -15,6 +15,18 @@ $radiusS: 0.4rem;
 $shadowLength: 5px;
 $shadowOpacity:0.4;
 
+/*=========================
+Override Button vars
+=========================*/
+
+$button-padding: 12px 23px;
+$button-radius: 8px;
+$button-primary: $primary;
+$button-hprimary:#9869b8;
+$button-text: $white;
+$button-size:1.8rem;
+$button-spacing:0.15rem;
+$button-side-margin:4px;
 
 /*=========================
 base
@@ -23,4 +35,5 @@ base
     @include ff;
     @include textFactory($f16,$white,"medium");
     @include containerFactory($base, 0, 0 0 0 0);
+    font-feature-settings: "palt" 1;
 }

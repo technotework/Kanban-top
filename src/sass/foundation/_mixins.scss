@@ -95,3 +95,20 @@ shadow
 @mixin shadow {
   box-shadow: 0 0 $shadowLength rgba(0, 0, 0,$shadowOpacity);
 }
+
+/*=========================
+animation
+=========================*/
+
+@mixin keyframes($animation-name) {
+
+  @keyframes #{$name} {
+    
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+ 
+  animation: $animation-name;
+}
