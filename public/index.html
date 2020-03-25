@@ -20,33 +20,50 @@
 </head>
 
 <body class="p-body">
-    <header class="p-header">
-        <div class="p-header__bgVisual">
-            <canvas id="top"></canvas>
-        </div>
-    </header>
 
+    <div class="p-mainCanvas">
+        <canvas id="top"></canvas>
+    </div>
 
-    <main class="p-main">
-        <h1 class="p-main__logo u-center">
-            <img src="/images/logo.png" alt="KANBAN" class="u-resImg" />
-        </h1>
-        <a href="#" class="p-main__gitLink u-hover">
-            <img src="/images/git.png" alt="LinkToGit" class="u-resImg" />
-        </a>
-        <div class="p-main__screen u-center">
-            <img src="/images/dammy.jpg" alt="dammy" class="u-resImg" />
-        </div>
-        <article class="p-article u-center u-mt45">
-            <div class="l-button_list">
+    <div class="p-wrapper">
+
+        <header>
+            <div class="p-header">
+                <h1 class="p-header__logo u-center">
+                    <img src="/images/logo.png" alt="KANBAN" class="c-resImg" />
+                </h1>
+                <a href="#" class="p-header__gitLink u-hover">
+                    <img src="/images/git.png" alt="LinkToGit" class="c-resImg" />
+                </a>
+                <div class="p-header__screen u-center">
+                    <img src="/images/dammy.jpg" alt="dammy" class="c-resImg" />
+                </div>
+            </div>
+            <div class="l-button-list u-center u-mt45">
                 <a href="" class="c-button__primary">
                     START DEMO
                 </a>
             </div>
-        </article>
+        </header>
 
-    </main>
+        <main class="p-main">
 
+            <article class="p-article u-center">
+                <div class="p-figure">
+                    <figure id="astro1" class="p-figure__main1">
+                        <img src="/images/fig1.png" alt="チームコラボレーション" class="c-resImg" />
+                    </figure>
+                    <div class="p-figure__main2--animate">
+                        <figure id="astro2" class="p-figure__main2">
+                            <img src="/images/fig2.png" alt="チームコラボレーション" class="c-resImg" />
+                        </figure>
+                    </div>
+                </div>
+
+            </article>
+
+        </main>
+    </div>
 </body>
 
 </html>

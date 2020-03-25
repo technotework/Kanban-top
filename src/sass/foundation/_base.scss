@@ -4,14 +4,13 @@
 * foundation/_base.scss
 */
 html {
-    font-size: $base-fsize;
+  font-size: $base-fsize;
 }
 
 body {
-   @include base;
-
+  @include base;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }

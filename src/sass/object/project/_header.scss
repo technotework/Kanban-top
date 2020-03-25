@@ -1,10 +1,30 @@
-.p-header{
-
-  &__mainVisual{
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 0;
+.p-header {
+  &__gitLink {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 36px;
+    right: 30px;
+    z-index: 1000;
   }
 
+  &__logo {
+    display: block;
+    width: 288px;
+    padding-top: 45px;
+  }
+
+  &__screen {
+    width: 876px;
+    height: 500px;
+    margin-top: 40px;
+    overflow: hidden;
+    border-radius: $radiusL;
+    border: solid 8px #ffffff21;
+    @include shadow;
+
+    & > img {
+      border-radius: $radiusS;
+    }
+  }
 }

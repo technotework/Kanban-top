@@ -2,9 +2,9 @@
 project vars
 =========================*/
 /*色*/
-$theme:#262c33;
-$base:#ececec;
-$primary:#7f549d;
+$theme: #262c33;
+$base: #ececec;
+$primary: #7f549d;
 
 /*角丸*/
 $radius: 0.8rem;
@@ -13,7 +13,7 @@ $radiusS: 0.4rem;
 
 /*ドロップシャドウ*/
 $shadowLength: 5px;
-$shadowOpacity:0.4;
+$shadowOpacity: 0.4;
 
 /*=========================
 Override Button vars
@@ -22,18 +22,18 @@ Override Button vars
 $button-padding: 12px 23px;
 $button-radius: 8px;
 $button-primary: $primary;
-$button-hprimary:#9869b8;
+$button-hprimary: #9869b8;
 $button-text: $white;
-$button-size:1.8rem;
-$button-spacing:0.15rem;
-$button-side-margin:4px;
+$button-size: 1.8rem;
+$button-spacing: 0.15rem;
+$button-side-margin: 4px;
 
 /*=========================
 base
 =========================*/
 @mixin base {
-    @include ff;
-    @include textFactory($f16,$white,"medium");
-    @include containerFactory($base, 0, 0 0 0 0);
-    font-feature-settings: "palt" 1;
+  @include ff;
+  @include textFactory($f16, $white, "medium");
+  @include containerFactory($base, 0, 0 0 0 0);
+  font-feature-settings: "palt" 1;
 }

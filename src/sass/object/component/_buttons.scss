@@ -2,29 +2,29 @@
 
 .c-button {
   display: inline-block;
-  padding:$button-padding;
-  border-radius:$button-radius;
+  padding: $button-padding;
+  border-radius: $button-radius;
   text-align: center;
   font-weight: bold;
-  color:$button-text;
+  color: $button-text;
   text-decoration: none;
   font-size: $button-size;
   letter-spacing: $button-spacing;
   margin: 0 $button-side-margin;
 }
 
-.c-button__primary{
+.c-button__primary {
   @extend .c-button;
   background-color: $button-primary;
-  &:hover{
+  &:hover {
     background-color: $button-hprimary;
   }
 }
 
-.c-button__secondary{
+.c-button__secondary {
   @extend .c-button;
   background-color: $button-secondary;
-  &:hover{
+  &:hover {
     background-color: $button-hsecondary;
   }
 }
