@@ -50,14 +50,14 @@ function init3D() {
   });
   box1 = new THREE.Mesh(geometry1, material);
   scene.add(box1);
-  box1.position.set(-2500, 300, 0);
+  box1.position.set(-2500, 0, 0);
 
   box2 = new THREE.Mesh(geometry2, material);
   scene.add(box2);
   box2.position.set(2600, 2000, 0);
 
   //LIGHT
-  let directionLight = new THREE.DirectionalLight(0xcccccc, 0.25);
+  let directionLight = new THREE.DirectionalLight(0xcccccc, 0.29);
   scene.add(directionLight);
   directionLight.position.set(0, 100, 100);
   let ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.8);

@@ -1,20 +1,68 @@
-.p-figure {
-  &__main1 {
-    position: absolute;
-    top: 23px;
-    right: -27px;
-    width: 542px;
-  }
+.p-figure-one {
+  position: absolute;
+  top: 0;
+  right: -58px;
+  width: 542px;
+  height: 482px;
+  z-index: 1000;
 
-  &__main2 {
-    width: 343px;
-  }
-  &__main2--animate {
+  &__main {
     position: absolute;
-    top: -51px;
-    left: -11px;
-    width: 343px;
-    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 476px;
+    height: 482px;
+    z-index: 910;
+  }
+  &__hand {
+    position: absolute;
+    top: 219px;
+    left: 272px;
+    width: 103px;
+    height: 100px;
+    z-index: 920;
+  }
+  &__line {
+    position: absolute;
+    top: 255px;
+    left: 393px;
+    width: 149px;
+    height: 104px;
+    z-index: 900;
+  }
+}
+
+.p-figure-two {
+  position: absolute;
+  top: -60px;
+  left: -15px;
+  width: 343px;
+  height: 207px;
+  z-index: 1000;
+
+  &__main {
+    position: absolute;
+    top: 17px;
+    left: 64px;
+    width: 245px;
+    height: 189px;
+    z-index: 910;
+  }
+  &__left {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 137px;
+    height: 96px;
+    z-index: 920;
+  }
+  &__right {
+    position: absolute;
+    top: 0;
+    left: 132px;
+    width: 211px;
+    height: 128px;
+    z-index: 900;
   }
 }
 

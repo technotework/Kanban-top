@@ -15,7 +15,9 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+
     <script src="/js/bundle.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -49,13 +51,27 @@
         <main class="p-main">
 
             <article class="p-article u-center">
-                <div class="p-figure">
-                    <figure id="astro1" class="p-figure__main1">
-                        <img src="/images/fig1.png" alt="チームコラボレーション" class="c-resImg" />
-                    </figure>
-                    <div class="p-figure__main2--animate">
-                        <figure id="astro2" class="p-figure__main2">
-                            <img src="/images/fig2.png" alt="チームコラボレーション" class="c-resImg" />
+                <div class="p-figure-container">
+                    <div class="p-figure-one">
+                        <figure class="p-figure-one__main">
+                            <img src="images/fig1_main.png" class="c-resImg" />
+                        </figure>
+                        <figure class="p-figure-one__hand">
+                            <img src="images/fig1_hand.png" class="c-resImg" />
+                        </figure>
+                        <figure class="p-figure-one__line">
+                            <img src="images/fig1_line.png" class="c-resImg" />
+                        </figure>
+                    </div>
+                    <div class="p-figure-two">
+                        <figure class="p-figure-two__main">
+                            <img src="images/fig2_main.png" class="c-resImg" />
+                        </figure>
+                        <figure class="p-figure-two__left">
+                            <img src="images/fig2_left.png" class="c-resImg" />
+                        </figure>
+                        <figure class="p-figure-two__right">
+                            <img src="images/fig2_right.png" class="c-resImg" />
                         </figure>
                     </div>
                 </div>
@@ -64,6 +80,16 @@
 
         </main>
     </div>
+    <script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
+    <script>
+        spirit.loadAnimation({
+            autoPlay: true,
+            loop: 50,
+            yoyo: true,
+            path: '/json/fig_one.json',
+            timeScale: 0.79
+        })
+    </script>
 </body>
 
 </html>
