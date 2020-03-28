@@ -4,9 +4,7 @@ import $ from 'jquery';
  * ready
  */
 $(() => {
-
   init();
-
 });
 
 /**
@@ -16,23 +14,24 @@ function init() {
 
   $("#js-wrapper").scroll(() => {
 
-    const start = 90;
-    const end = start + 600;
+    //スクロール量に比例して背景を薄くする
+    const start = 50;
+    const end = start + 1120;
     const startAlpha = 1;
-    const endAlpha = 0.3;
+    const endAlpha = 0;
     let result;
 
     let scroll = $("#js-wrapper").scrollTop();
 
-    console.log(scroll);
-
     if (scroll < start) {
       result = 1;
-    }
-    else if (scroll < end) {
+    } else if (scroll < end) {
       let a = (startAlpha - endAlpha) / (start - end);
       let b = startAlpha - start * a;
       result = Math.floor((scroll * a + b) * 100) / 100;
+
+    } else if (scroll > end) {
+      result = endAlpha;
     }
     $("#js-canvas").css({ 'opacity': result });
   });

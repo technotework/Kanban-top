@@ -1,18 +1,21 @@
 import $ from 'jquery';
 import spirit from 'spiritjs';
 import fig_one from './fig_one.json';
+import card from './card';
 
 /*---------------------------
 Spirit Animation 制御
 ---------------------------*/
-let $astro;
-let astroIsPlay;
 
 /**
  * ready
  */
 $(() => {
 
+  const $astro = $("#js-astro");
+  const $cards = $("#js-cards");
+
+  //宇宙飛行士
   spirit.loadAnimation({
     autoPlay: false,
     loop: 50,
@@ -21,7 +24,39 @@ $(() => {
     timeScale: 0.79
   }).then(timeline => {
 
-    init(timeline);
+    let obj = {
+      timeline: timeline,
+      $target: $astro,
+      playFlag: false,
+      outHeight: -460,
+      offset: 0
+    };
+    init(obj);
+  });
+
+  //カード
+  spirit.loadAnimation({
+    autoPlay: false,
+    loop: 0,
+    yoyo: false,
+    animationData: card,
+    timeScale: 0.75
+  }).then(timeline => {
+
+    const obj = {
+      timeline: timeline,
+      $target: $cards,
+      playFlag: false,
+      outHeight: -415,
+      offset: 450
+    };
+    init(obj);
+
+    $("#js-replay").on("click", () => {
+      timeline.pause(0);
+      timeline.play();
+      return false;
+    });
   });
 
 });
@@ -29,19 +64,17 @@ $(() => {
 /**
  * 初期設定
  */
-function init(timeline) {
+function init(obj) {
 
-  $astro = $("#js-astro");
-  astroIsPlay = false;
-
-  check(timeline);
+  obj.playFlag = false;
+  check(obj);
 
   $("#js-wrapper").scroll(() => {
-    check(timeline);
+    check(obj);
   });
 
   $(window).resize(() => {
-    check(timeline);
+    check(obj);
   });
 
 }
@@ -50,17 +83,20 @@ function init(timeline) {
  * オブジェクト位置を確認して再生するかどうかをきめる
  * @param {*} timeline 
  */
-function check(timeline) {
-  let wh = document.documentElement.clientHeight;
-  let astroTop = $astro.offset().top;
+function check(obj) {
 
-  if (astroIsPlay == false && wh >= astroTop) {
+  let { timeline, $target, outHeight, offset } = obj;
+
+  let wh = document.documentElement.clientHeight;
+  let astroTop = $target.offset().top + offset;
+
+  if (obj.playFlag == false && wh >= astroTop) {
     timeline.play();
-    astroIsPlay = true;
+    obj.playFlag = true;
   }
-  if (astroIsPlay == true && (wh < astroTop || astroTop < -460)) {
+  if (obj.playFlag == true && (wh < astroTop || astroTop < outHeight)) {
     timeline.pause(0);
-    astroIsPlay = false;
+    obj.playFlag = false;
   }
 }
 

@@ -44,8 +44,8 @@ h
 =========================*/
 
 @mixin h2 {
-  @include textFactory(3.8rem, $text, "en");
-  line-height: 4.7rem;
+  @include textFactory(3.2rem, $text, "en");
+  line-height: 3.8rem;
   letter-spacing: 0.08rem;
   font-feature-settings: "palt" 1;
 }
@@ -56,6 +56,6 @@ p
 
 @mixin p {
   @include textFactory(1.75rem, $text, "medium");
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.17rem;
   line-height: 3.6rem;
 }
