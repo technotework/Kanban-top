@@ -5,6 +5,7 @@ project vars
 $theme: #262c33;
 $base: #ececec;
 $primary: #7f549d;
+$text: #272c32;
 
 /*角丸*/
 $radius: 0.8rem;
@@ -33,7 +34,28 @@ base
 =========================*/
 @mixin base {
   @include ff;
-  @include textFactory($f16, $white, "medium");
+  @include textFactory($f16, $text, "medium");
   @include containerFactory($base, 0, 0 0 0 0);
   font-feature-settings: "palt" 1;
+}
+
+/*=========================
+h
+=========================*/
+
+@mixin h2 {
+  @include textFactory(3.8rem, $text, "en");
+  line-height: 4.7rem;
+  letter-spacing: 0.08rem;
+  font-feature-settings: "palt" 1;
+}
+
+/*=========================
+p
+=========================*/
+
+@mixin p {
+  @include textFactory(1.75rem, $text, "medium");
+  letter-spacing: 0.25rem;
+  line-height: 3.6rem;
 }

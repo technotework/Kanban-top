@@ -23,12 +23,12 @@
 
 <body class="p-body">
 
-    <div class="p-mainCanvas">
+    <div class="p-mainCanvas js-mainCanvas">
         <canvas id="top"></canvas>
     </div>
 
     <div class="p-wrapper">
-
+        <!--header-->
         <header>
             <div class="p-header">
                 <h1 class="p-header__logo u-center">
@@ -47,38 +47,139 @@
                 </a>
             </div>
         </header>
-
+        <!--main-->
         <main class="p-main">
 
-            <article class="p-article u-center">
-                <div class="p-figure-container">
-                    <div class="p-figure-one">
-                        <figure class="p-figure-one__main">
+            <article class="p-main__article u-center">
+
+                <!--astro_img-->
+                <div>
+                    <div class="p-figure-astro-one">
+                        <figure class="p-figure-astro-one__main">
                             <img src="images/fig1_main.png" class="c-resImg" />
                         </figure>
-                        <figure class="p-figure-one__hand">
+                        <figure class="p-figure-astro-one__hand">
                             <img src="images/fig1_hand.png" class="c-resImg" />
                         </figure>
-                        <figure class="p-figure-one__line">
+                        <figure class="p-figure-astro-one__line">
                             <img src="images/fig1_line.png" class="c-resImg" />
                         </figure>
                     </div>
-                    <div class="p-figure-two">
-                        <figure class="p-figure-two__main">
+                    <div class="p-figure-astro-two">
+                        <figure class="p-figure-astro-two__main">
                             <img src="images/fig2_main.png" class="c-resImg" />
                         </figure>
-                        <figure class="p-figure-two__left">
+                        <figure class="p-figure-astro-two__left">
                             <img src="images/fig2_left.png" class="c-resImg" />
                         </figure>
-                        <figure class="p-figure-two__right">
+                        <figure class="p-figure-astro-two__right">
                             <img src="images/fig2_right.png" class="c-resImg" />
                         </figure>
                     </div>
                 </div>
+                <!--/astro_img-->
+                <!--Lead-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">
+                        Good Team<br />Collaboration?
+                    </h2>
+                    <p class="c-paragraph p-main__paragraph">
+                        素敵でワクワクするチームコラボレーションをしていますか？<br />
+                        誰が何をしているかわからない、進捗を共有するのに時間がかかる。<br />
+                        そんな現場では、うまくいっているつもりでも、<br class="u-pc-br" />
+                        うっかりチームメイトが火星人に連れ去られていた、<br class="u-pc-br" />
+                        そんなトラブルが待ち構えているかもしれません。<br />
+                        チームを見える化するソリューションは？<br />
+                        そこに「KANBAN」がベストフィットします。
+                    </p>
+                </section>
+                <!--About-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">
+                        WHAT’S<br />KANBAN?
+                    </h2>
+                    <!--figure-->
 
+
+                    <!--/figure-->
+                    <p class="c-paragraph p-main__paragraph">
+                        「KANBAN」はシンプルな、タスク管理・コラボレーションツールです。<br />
+                        仕事の進行プロセスを模した「Board」。<br />
+                        ToDoとアサインメンバーを記録した「Task」。<br /><br />
+
+                        「Board」に貼ってある「Task」を見るだけで、<br class="u-pc-br" />
+                        誰が何をしているか、どれくらい仕事があるのか<br class="u-pc-br" />
+                        一目瞭然です。
+                    </p>
+                </section>
+                <!--Detail-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">
+                        Feature
+                    </h2>
+                    <div class="p-feature">
+                        <ul class="js-tab p-feature__tab">
+                            <li><a href="#">無制限ボード</a></li>
+                            <li><a href="#">マルチユーザー</a></li>
+                            <li><a href="#">リアルタイム</a></li>
+                        </ul>
+                        <div class="p-feature__content">
+                            <div id="js-tab-content-board">
+                                <figure>
+
+                                </figure>
+                                <p>
+                                    a
+                                </p>
+                            </div>
+                            <div id="js-tab-content-multiuser">
+                                <figure>
+
+                                </figure>
+                                <p>
+                                    b
+                                </p>
+                            </div>
+                            <div id="js-tab-content-realtime">
+                                <figure>
+
+                                </figure>
+                                <p>
+                                    c
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--StartDemo-->
+                    <div class="l-button-list u-center u-mt45">
+                        <a href="" class="c-button__primary">
+                            START DEMO
+                        </a>
+                    </div>
+                </section>
             </article>
-
         </main>
+        <!--aside-->
+        <aside class="p-aside">
+            <section>
+                <h2 class="p-aside__h2">デモご利用上のご注意(免責事項)</h2>
+                <p class="p-aside__p">
+                    「KANBAN」(以下本デモ)は技術デモを目的として公開されたサービスです。<br />
+                    本デモに興味をもっていただきありがとうございます。<br />
+                    ご利用上の注意点を記載いたしますので、同意していただいた上、ご利用ください。<br />
+                    本デモは実際のサービスの保守・運用・機能の提供を目的としたものではありません。<br />
+                    デモ用のログインID・パスワードを関係者以外に伝達することはお控えください。<br />
+                    登録ユーザー情報および入力データは一定期間後削除されます。<br />
+                    本デモに機密情報、個人情報を入力しないようにお願いします。<br />
+                    本デモの利用によって生じた直接的・間接的損害について制作者は一切の責任を負いません。<br />
+                    無断転載を禁じます。
+                </p>
+            </section>
+        </aside>
+        <!--footer-->
+        <footer class="c-footer p-footer">
+            a
+        </footer>
     </div>
     <script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
     <script>

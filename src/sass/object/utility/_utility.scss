@@ -18,7 +18,20 @@ opacity hover
 }
 
 /*=========================
-margin generator
+mobile br
+=========================*/
+.u-pc-br {
+  display: inline;
+}
+
+@include mobile {
+  .u-pc-br {
+    display: none;
+  }
+}
+
+/*=========================
+margin padding generator
 =========================*/
 $margin-min: 1;
 $margin-max: 200;
@@ -35,5 +48,23 @@ $margin-max: 200;
   }
   .u-ml#{$i} {
     margin-left: #{$i}px;
+  }
+}
+
+$padding-min: 1;
+$padding-max: 200;
+
+@for $i from $padding-min through $padding-max {
+  .u-pt#{$i} {
+    padding-top: #{$i}px;
+  }
+  .u-pr#{$i} {
+    padding-right: #{$i}px;
+  }
+  .u-pb#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .u-pl#{$i} {
+    padding-left: #{$i}px;
   }
 }

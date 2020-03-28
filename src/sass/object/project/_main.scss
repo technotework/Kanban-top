@@ -1,0 +1,31 @@
+.p-main {
+  &__article {
+    position: relative;
+    max-width: 876px;
+    padding-top: 391px;
+  }
+
+  &__section {
+    width: 748px;
+    margin: 0 auto;
+  }
+
+  &__h2 {
+    position: relative;
+    padding-bottom: 25px;
+    &::after {
+      content: "";
+      width: 89px;
+      height: 18px;
+      position: absolute;
+      background-image: url("/images/dot.png");
+      background-repeat: no-repeat;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__paragraph {
+    padding: 46px 0 68px 39px;
+  }
+}
