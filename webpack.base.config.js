@@ -21,6 +21,12 @@ module.exports = {
         ]
       },
       {
+        test: /\.json$/,
+        include: path.resolve(__dirname, 'src/js'),
+        use: ['json-loader'],
+        type: "javascript/auto"
+      },
+      {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src/sass'),
         use: ['style-loader', 'css-loader', 'sass-loader', 'import-glob-loader']

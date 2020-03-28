@@ -23,11 +23,11 @@
 
 <body class="p-body">
 
-    <div class="p-mainCanvas js-mainCanvas">
+    <div id="js-canvas" class="p-mainCanvas js-mainCanvas">
         <canvas id="top"></canvas>
     </div>
 
-    <div class="p-wrapper">
+    <div id="js-wrapper" class="p-wrapper">
         <!--header-->
         <header>
             <div class="p-header">
@@ -53,7 +53,7 @@
             <article class="p-main__article u-center">
 
                 <!--astro_img-->
-                <div>
+                <div id="js-astro" class="p-figure-astro">
                     <div class="p-figure-astro-one">
                         <figure class="p-figure-astro-one__main">
                             <img src="images/fig1_main.png" class="c-resImg" />
@@ -181,16 +181,6 @@
             a
         </footer>
     </div>
-    <script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
-    <script>
-        spirit.loadAnimation({
-            autoPlay: true,
-            loop: 50,
-            yoyo: true,
-            path: '/json/fig_one.json',
-            timeScale: 0.79
-        })
-    </script>
 </body>
 
 </html>

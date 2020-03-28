@@ -28,6 +28,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "import-glob-loader": "^1.1.0",
+    "json-loader": "^0.5.7",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
+    "spiritjs": "^3.0.3",
     "three": "^0.114.0"
   }
 }
