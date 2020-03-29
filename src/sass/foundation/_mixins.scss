@@ -36,9 +36,6 @@ font mixins
 Base Layout Vars
 =================================*/
 
-$responsive-min: 559px;
-$responsive-max: 1180px;
-
 //responsive
 @mixin responsive($w) {
   @media screen and (max-width: $w) {
@@ -47,9 +44,16 @@ $responsive-max: 1180px;
 }
 
 @mixin mobile {
-  @media screen and (max-width: $responsive-min) {
+  @media screen and (max-width: $break_mobile) {
     @content;
   }
+}
+
+@function calcScale($val) {
+  $base: 800;
+
+  $result: calc($base / $val * 1px);
+  @return $result;
 }
 
 /*=========================

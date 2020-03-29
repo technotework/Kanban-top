@@ -55,7 +55,12 @@ p
 =========================*/
 
 @mixin p {
-  @include textFactory(1.75rem, $text, "medium");
+  @include textFactory(1.6rem, $text, "medium");
   letter-spacing: 0.17rem;
-  line-height: 3.6rem;
+  line-height: 3.3rem;
 }
+
+/*=========================
+override responsive
+=========================*/
+$break_tablet: 748px;

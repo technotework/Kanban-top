@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import spirit from 'spiritjs';
-import fig_one from './fig_one.json';
-import card from './card';
+import fig_one from './json/fig_one.json';
+import card from './json/card';
 
 /*---------------------------
 Spirit Animation 制御
@@ -18,7 +18,7 @@ $(() => {
   //宇宙飛行士
   spirit.loadAnimation({
     autoPlay: false,
-    loop: 50,
+    loop: 0,
     yoyo: true,
     animationData: fig_one,
     timeScale: 0.79
@@ -68,6 +68,7 @@ function init(obj) {
 
   obj.playFlag = false;
   check(obj);
+  resize(obj);
 
   $("#js-wrapper").scroll(() => {
     check(obj);
@@ -75,6 +76,7 @@ function init(obj) {
 
   $(window).resize(() => {
     check(obj);
+    resize(obj);
   });
 
 }
@@ -98,6 +100,33 @@ function check(obj) {
     timeline.pause(0);
     obj.playFlag = false;
   }
+}
+
+/**
+ * 縮小処理
+ * @param {*} obj 
+ */
+function resize(obj) {
+
+  let { $target } = obj;
+  let ww = document.documentElement.clientWidth;
+  const baseW = 800;
+  const baseCardHeight = 446;
+  let ratio = Math.floor(ww / baseW * 100) / 100;
+  let result;
+  let cardHeight;
+  if (ww < 800) {
+    result = `scale(${ratio})`;
+    cardHeight = Math.floor(baseCardHeight * ratio) + "px";
+  } else {
+    result = "scale(1)";
+    cardHeight = baseCardHeight;
+  }
+  $target.css('transform', result);
+
+  $("#js-cards").css('height', cardHeight);
+
+
 }
 
 

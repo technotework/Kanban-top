@@ -16,7 +16,7 @@ function init() {
 
     //スクロール量に比例して背景を薄くする
     const start = 50;
-    const end = start + 1120;
+    const end = start + 1000;
     const startAlpha = 1;
     const endAlpha = 0;
     let result;

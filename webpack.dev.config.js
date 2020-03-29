@@ -10,6 +10,7 @@ module.exports = merge(baseConfig, {
     contentBase: 'public',
     publicPath: '/js/',
     hot: true,
-    watchContentBase: true
+    watchContentBase: true,
+    host: '0.0.0.0'
   }
 });
