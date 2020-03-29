@@ -49,11 +49,10 @@ Base Layout Vars
   }
 }
 
-@function calcScale($val) {
-  $base: 800;
-
-  $result: calc($base / $val * 1px);
-  @return $result;
+@mixin tablet {
+  @media screen and (max-width: $break_tablet) {
+    @content;
+  }
 }
 
 /*=========================

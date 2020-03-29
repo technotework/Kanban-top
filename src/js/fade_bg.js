@@ -12,19 +12,21 @@ $(() => {
  */
 function init() {
 
+  let initAlpha = $("#js-canvas").css("opacity");
+
   $("#js-wrapper").scroll(() => {
 
     //スクロール量に比例して背景を薄くする
     const start = 50;
     const end = start + 1000;
-    const startAlpha = 1;
+    const startAlpha = initAlpha;
     const endAlpha = 0;
     let result;
 
     let scroll = $("#js-wrapper").scrollTop();
 
     if (scroll < start) {
-      result = 1;
+      result = initAlpha;
     } else if (scroll < end) {
       let a = (startAlpha - endAlpha) / (start - end);
       let b = startAlpha - start * a;

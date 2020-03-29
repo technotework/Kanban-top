@@ -34,7 +34,8 @@
   &__paragraph {
     padding: 33px 0 66px 40px;
     @include responsive(748px) {
-      padding: 33px 0 66px 15px;
+      padding: 33px 5px 66px 5px;
+      text-align: justify;
     }
   }
 }

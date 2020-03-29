@@ -24,7 +24,7 @@ mobile br
   display: inline;
 }
 
-@include responsive($break_tablet) {
+@include responsive($break_br) {
   .u-pc-br {
     display: none;
   }

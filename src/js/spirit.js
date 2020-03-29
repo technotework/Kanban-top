@@ -18,7 +18,7 @@ $(() => {
   //宇宙飛行士
   spirit.loadAnimation({
     autoPlay: false,
-    loop: 0,
+    loop: 50,
     yoyo: true,
     animationData: fig_one,
     timeScale: 0.79

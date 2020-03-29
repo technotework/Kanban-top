@@ -1,5 +1,5 @@
 .p-header {
-  @include mobile {
+  @include responsive(880px) {
     margin: 0 10px;
   }
 

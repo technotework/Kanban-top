@@ -39,8 +39,8 @@ function init3D() {
   camera.position.set(0, 700, 7000);
 
   //SIZE
-  onResize();
 
+  let w = window.innerWidth;
   //BOX
   let geometry1 = new THREE.DodecahedronGeometry(1200);
   let geometry2 = new THREE.DodecahedronGeometry(1400);
@@ -49,19 +49,17 @@ function init3D() {
   });
   box1 = new THREE.Mesh(geometry1, material);
   scene.add(box1);
-  box1.position.set(-2500, 0, 0);
-
   box2 = new THREE.Mesh(geometry2, material);
   scene.add(box2);
-  box2.position.set(2600, 2000, 0);
 
+  setPosition(w);
   //LIGHT
   let directionLight = new THREE.DirectionalLight(0xcccccc, 0.29);
   scene.add(directionLight);
   directionLight.position.set(0, 100, 100);
   let ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.8);
   scene.add(ambientLight);
-
+  onResize();
   renderer.render(scene, camera);
 }
 
@@ -98,4 +96,38 @@ function onResize() {
   renderer.setSize(w, h);
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
+  setPosition(w);
+}
+
+/**
+ * 位置を比率連動計算
+ * @param {*} value 
+ * @param {*} minVal 
+ * @param {*} maxVal 
+ */
+function ratio(value, minVal, maxVal) {
+
+  let maxW = 880;
+  let minW = 375;
+  let a = (maxVal - minVal) / (maxW - minW);
+  let b = maxVal - (maxW * a);
+  let y = a * value + b;
+  console.log(value, minVal, maxVal, "/", b, a, y);
+  return y;
+}
+
+/**
+ * 位置決定
+ * @param {*} w 
+ */
+function setPosition(w) {
+
+  if (w >= 880) {
+    box1.position.set(-2500, 0, 0);
+    box2.position.set(2600, 2000, 0);
+  } else {
+
+    box1.position.set(ratio(w, -1200, -2500), ratio(w, 700, 0), 0);
+    box2.position.set(ratio(w, 1400, 2600), ratio(w, 2500, 2000), 0);
+  }
 }
