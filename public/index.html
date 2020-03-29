@@ -164,14 +164,14 @@
                     <h2 class="p-main__h2 c-h2">
                         Feature
                     </h2>
-                    <div class="p-feature">
+                    <div class="p-feature l-flex">
                         <ul class="js-tab p-feature__tab">
-                            <li><a href="#">無制限ボード</a></li>
-                            <li><a href="#">マルチユーザー</a></li>
-                            <li><a href="#">リアルタイム</a></li>
+                            <li><a href="#" id="js-tab__board">無制限ボード</a></li>
+                            <li><a href="#" id="js-tab__multiuser">マルチユーザー</a></li>
+                            <li><a href="#" id="js-tab-realtime">リアルタイム</a></li>
                         </ul>
                         <div class="p-feature__content">
-                            <div id="js-tab-content-board">
+                            <div id="js-tab__board--content" class="js-tab-item ">
                                 <figure>
 
                                 </figure>
@@ -179,7 +179,7 @@
                                     a
                                 </p>
                             </div>
-                            <div id="js-tab-content-multiuser">
+                            <div id="js-tab__multiuser--content" class="js-tab-item">
                                 <figure>
 
                                 </figure>
@@ -187,7 +187,7 @@
                                     b
                                 </p>
                             </div>
-                            <div id="js-tab-content-realtime">
+                            <div id="js-tab-realtime--content" class="js-tab-item">
                                 <figure>
 
                                 </figure>
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                     <!--StartDemo-->
-                    <div class="l-button-list u-center u-mt45">
+                    <div class="p-button-list l-flex-center u-mt38">
                         <a href="" class="c-button__primary">
                             START DEMO
                         </a>
@@ -209,7 +209,7 @@
         <!--aside-->
         <aside class="c-aside u-mt33">
             <section class="p-notice u-center">
-                <h2 class="p-notice__h2">デモご利用上のご注意(免責事項)</h2>
+                <h2 class="p-notice__h2">デモご利用上のご注意</h2>
                 <p class="p-notice__paragraph">
                     「KANBAN」(以下本デモ)は技術デモを目的として公開されたサービスです。<br />
                     ご利用上の注意点を記載いたしますので、同意していただいた上、ご利用ください。<br />
@@ -217,7 +217,6 @@
                     デモ用のログインID・パスワードを関係者以外に伝達することはお控えください。<br />
                     登録ユーザー情報および入力データは一定期間後削除されます。<br />
                     本デモに機密情報、個人情報を入力しないようにお願いします。<br />
-                    本デモの利用によって利用者に生じた直接的・間接的損害について制作者は免責されるものとします。<br />
                     無断転載を禁じます。
                 </p>
             </section>

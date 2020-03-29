@@ -1,11 +1,31 @@
 .p-feature {
-  &__tab {
+  padding: 36px 0 0 0;
+
+  &__tab > li {
+    width: 160px;
+    padding-bottom: 5px;
+    list-style: none;
+    color: #979797;
   }
 
-  &__content {
+  &__tab > li > a,
+  &__tab > li > a:hover,
+  &__tab > li > a:visited,
+  &__tab > li > a:focus {
+    @include textFactory(1.4rem, #b8b8b8, "bold");
+    text-decoration: none;
+    letter-spacing: 0.55rem;
   }
 
-  &__content > figure {
+  &__tab > li > a.p-feature__tab--current {
+    color: #272c32;
+    letter-spacing: 0.55rem;
+  }
+
+  &__content figure {
+    width: 550px;
+    height: 363px;
+    background-color: #ccc;
   }
 
   &__content > p {
