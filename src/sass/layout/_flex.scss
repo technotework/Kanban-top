@@ -5,3 +5,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.l-flex-vcenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

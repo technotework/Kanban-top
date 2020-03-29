@@ -5,9 +5,9 @@
   }
 
   &__section {
-    max-width: 748px;
+    max-width: $baseWidht;
     margin: 0 auto;
-    @include responsive(748px) {
+    @include responsive($baseWidht) {
       padding: 0 10px;
     }
   }
@@ -33,7 +33,7 @@
 
   &__paragraph {
     padding: 33px 0 66px 40px;
-    @include responsive(748px) {
+    @include responsive($baseWidht) {
       padding: 33px 5px 66px 5px;
       text-align: justify;
     }

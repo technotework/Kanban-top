@@ -1,0 +1,20 @@
+.p-notice {
+  max-width: $baseWidht;
+  padding: 34px 0 53px 0;
+  background-color: $theme;
+
+  &__h2 {
+    @include textFactory(1.6rem, $white, "medium");
+    font-feature-settings: "palt" 1;
+    line-height: 3.3rem;
+    letter-spacing: 0.43rem;
+    padding-bottom: 28px;
+  }
+
+  &__paragraph {
+    @include textFactory(1.5rem, $white, "regular");
+    line-height: 3.1rem;
+    letter-spacing: 0.26rem;
+    padding-left: 28px;
+  }
+}

@@ -16,6 +16,9 @@ $radiusS: 0.4rem;
 $shadowLength: 5px;
 $shadowOpacity: 0.4;
 
+/*ベースの幅*/
+$baseWidht: 748px;
+
 /*=========================
 Override Button vars
 =========================*/
@@ -38,6 +41,18 @@ base
   @include containerFactory($base, 0, 0 0 0 0);
   font-feature-settings: "palt" 1;
 }
+
+/*=========================
+override aside
+=========================*/
+$aside-width: 100vw;
+$aside-bg: $theme;
+
+/*=========================
+override footer
+=========================*/
+$footer-width: 100vw;
+$footer-bg: $theme;
 
 /*=========================
 h
@@ -63,4 +78,4 @@ p
 /*=========================
 override responsive
 =========================*/
-$break_br: 748px;
+$break_br: $baseWidht;
