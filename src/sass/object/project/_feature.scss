@@ -22,11 +22,16 @@
     letter-spacing: 0.55rem;
   }
 
-  &__content figure {
+  &__items {
+    width: 550px;
+    height: 363px;
+    margin-bottom: 33px;
+  }
+
+  &__item {
     width: 550px;
     height: 363px;
     background-color: #ccc;
-    margin-bottom: 33px;
   }
 
   &__content > p {

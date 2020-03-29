@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1",
     "spiritjs": "^3.0.3",
     "three": "^0.114.0"
   }
