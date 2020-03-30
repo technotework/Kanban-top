@@ -19,6 +19,10 @@ img {
   backface-visibility: hidden;
 }
 
+button:focus {
+	outline:0;
+}
+
 #grid {
   width: 100vw;
   height: 6000px;

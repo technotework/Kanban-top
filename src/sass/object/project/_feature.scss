@@ -1,11 +1,29 @@
 .p-feature {
   padding: 36px 0 0 0;
 
+  @include tablet{
+    padding: 30px 0 0 0;
+  }
+
+  &__tab{
+    @include tablet{
+      margin-bottom: 6px;
+    }
+  }
+
   &__tab > li {
     width: 160px;
     padding-bottom: 5px;
     list-style: none;
     color: #979797;
+
+
+    @include tablet{
+
+      display: inline-block;
+      width: auto;
+      padding-right: 10px;
+    }
   }
 
   &__tab > li > a,
@@ -15,26 +33,68 @@
     @include textFactory(1.4rem, #b8b8b8, "bold");
     text-decoration: none;
     letter-spacing: 0.55rem;
+
+    @include tablet{
+      letter-spacing: 0.1rem;
+    }
   }
 
   &__tab > li > a.p-feature__tab--current {
     color: #272c32;
-    letter-spacing: 0.55rem;
+  }
+
+  &__content{
+    width: 550px;
+    height: auto;
+
+    @include tablet{
+      width: calc(100vw - 20px);
+      height: auto; 
+    }
   }
 
   &__items {
     width: 550px;
-    height: 363px;
-    margin-bottom: 33px;
+    height: auto;
+
+    @include tablet{
+      width: calc(100vw - 20px);
+      height: auto; 
+    }
   }
 
   &__item {
-    width: 550px;
-    height: 363px;
+    width: 100%;
+    height: 100%;
     background-color: #ccc;
+   
   }
 
-  &__content > p {
-    font-size: 1.4rem;
+  &__paragraph {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.06rem;
   }
+}
+
+.slide-arrow{
+  position: absolute;
+  top: calc(50% - 17px);
+  width:35px;
+  height:35px;
+  background-color: $theme;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 9000;
+}
+
+.prev-arrow{
+  
+  left:5px;
+}
+
+.next-arrow{
+  
+  right:5px;
 }

@@ -112,7 +112,7 @@ function ratio(value, minVal, maxVal) {
   let a = (maxVal - minVal) / (maxW - minW);
   let b = maxVal - (maxW * a);
   let y = a * value + b;
-  console.log(value, minVal, maxVal, "/", b, a, y);
+
   return y;
 }
 
