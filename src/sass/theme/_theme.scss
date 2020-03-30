@@ -73,6 +73,11 @@ p
   @include textFactory(1.6rem, $text, "medium");
   letter-spacing: 0.17rem;
   line-height: 3.3rem;
+ 
+  @include tablet{
+    @include textFactory(1.5rem, $text, "medium");
+    text-align: justify;  
+  }
 }
 
 /*=========================

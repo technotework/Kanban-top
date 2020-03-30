@@ -12,17 +12,18 @@
   }
 
   &__tab > li {
-    width: 160px;
+    width: 190px;
+    padding-left: 40px;
     padding-bottom: 5px;
     list-style: none;
     color: #979797;
-
-
+    
     @include tablet{
 
       display: inline-block;
       width: auto;
       padding-right: 10px;
+      padding-left: 0;
     }
   }
 
@@ -44,21 +45,21 @@
   }
 
   &__content{
-    width: 550px;
+    width: 510px;
     height: auto;
 
     @include tablet{
-      width: calc(100vw - 20px);
+      width: calc(100vw - 30px);
       height: auto; 
     }
   }
 
   &__items {
-    width: 550px;
+    width: 510px;
     height: auto;
 
     @include tablet{
-      width: calc(100vw - 20px);
+      width: calc(100vw - 30px);
       height: auto; 
     }
   }
@@ -71,9 +72,18 @@
   }
 
   &__paragraph {
-    font-size: 1.5rem;
-    line-height: 3rem;
-    letter-spacing: 0.06rem;
+    
+    @include textFactory(1.5rem, $text, "medium");
+    letter-spacing: 0.17rem;
+    line-height: 3.3rem;
+    padding:0 5px;
+    
+    @include tablet{
+     
+      padding-top: 13px;
+      @include textFactory(1.5rem, $text, "medium");
+    text-align: justify;  
+    }
   }
 }
 
