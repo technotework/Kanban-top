@@ -15,14 +15,14 @@
   }
 
   &__paragraph {
-    @include textFactory(1.5rem, $white, "regular");
+    @include textFactory(1.4rem, $white, "regular");
     line-height: 3.1rem;
     letter-spacing: 0.26rem;
     padding-left: 28px;
     @include tablet{
-      font-size:1.4rem;
+      font-size:1.25rem;
       line-height: 2.1rem;
-      padding:10px 10px 0 10px;
+      padding:10px 20px 0 20px;
     }
   }
 }
