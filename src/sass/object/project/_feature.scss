@@ -1,12 +1,14 @@
 .p-feature {
   padding: 36px 0 0 0;
 
-  @include tablet{
+  @include tablet {
     padding: 30px 0 0 0;
   }
 
-  &__tab{
-    @include tablet{
+  &__tab {
+    margin-top: -7px;
+
+    @include tablet {
       margin-bottom: 6px;
     }
   }
@@ -14,12 +16,11 @@
   &__tab > li {
     width: 190px;
     padding-left: 40px;
-    padding-bottom: 5px;
+    padding-bottom: 22px;
     list-style: none;
     color: #979797;
-    
-    @include tablet{
 
+    @include tablet {
       display: inline-block;
       width: auto;
       padding-right: 10px;
@@ -35,7 +36,7 @@
     text-decoration: none;
     letter-spacing: 0.55rem;
 
-    @include tablet{
+    @include tablet {
       letter-spacing: 0.1rem;
     }
   }
@@ -44,67 +45,85 @@
     color: #272c32;
   }
 
-  &__content{
+  &__content {
     width: 510px;
     height: auto;
 
-    @include tablet{
+    @include tablet {
       width: calc(100vw - 30px);
-      height: auto; 
+      height: auto;
     }
   }
 
   &__items {
     width: 510px;
     height: auto;
+    margin-bottom: 34px;
 
-    @include tablet{
+    @include tablet {
       width: calc(100vw - 30px);
-      height: auto; 
+      height: auto;
     }
   }
 
   &__item {
+    position: relative;
     width: 100%;
     height: 100%;
+    margin-bottom: 58px;
+  }
+
+  &__img {
     background-color: #ccc;
-   
+    border: solid 1px #fff;
+    border-radius: 7px;
+    overflow: hidden;
+    font-weight: bold;
+  }
+
+  &__caption {
+    @include textFactory(1.4rem, $text, "heavy");
+    position: absolute;
+    width: calc(100% - 100px);
+    bottom: -55px;
+    margin: 0 0 0 50px;
+    padding-left: 1rem;
+    letter-spacing: 0.2rem;
+    background-color: #1fc737;
   }
 
   &__paragraph {
-    
     @include textFactory(1.5rem, $text, "medium");
     letter-spacing: 0.17rem;
     line-height: 3.3rem;
-    padding:0 5px;
-    
-    @include tablet{
-     
+    padding: 0 5px;
+    text-align: justify;
+
+    @include tablet {
       padding-top: 13px;
       @include textFactory(1.5rem, $text, "medium");
-    text-align: justify;  
+      text-align: justify;
     }
   }
 }
 
-.slide-arrow{
+.slide-arrow {
   position: absolute;
-  top: calc(50% - 17px);
-  width:35px;
-  height:35px;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
   background-color: $theme;
   border: none;
-  border-radius: 30px;
+  border-radius: 40px;
   cursor: pointer;
   z-index: 9000;
 }
 
-.prev-arrow{
-  
-  left:5px;
+.prev-arrow {
+  left: 0;
 }
 
-.next-arrow{
-  
-  right:5px;
+.next-arrow {
+  right: 0;
 }

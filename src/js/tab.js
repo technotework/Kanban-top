@@ -21,7 +21,7 @@ function init() {
  * スライドの設定処理
  */
 function setupSlide() {
-  const groups = ["#js-tab__board--figures", "#js-tab__multiuser--figures", "#js-tab-realtime--figures"];
+  const groups = ["#js-tab__edit--figures", "#js-tab__board--figures", "#js-tab__multiuser--figures", "#js-tab-realtime--figures"];
 
   for (let i = 0; i < groups.length; i++) {
     let $target = $(groups[i]);
@@ -38,7 +38,7 @@ function setupSlide() {
  * タブの設定処理
  */
 function setupTab() {
-  const targets = ["#js-tab__board", "#js-tab__multiuser", "#js-tab-realtime"];
+  const targets = ["#js-tab__edit", "#js-tab__board", "#js-tab__multiuser", "#js-tab-realtime"];
   changeTab($(targets[0]));
 
   for (let i = 0; i < targets.length; i++) {

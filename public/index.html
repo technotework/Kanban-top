@@ -28,7 +28,7 @@
     </div>
 
     <div id="js-wrapper" class="p-wrapper">
-
+        <!--div id="grid"></div-->
         <!--header-->
         <header>
             <div class="p-header">
@@ -165,21 +165,62 @@
                     </h2>
                     <div class="p-feature l-flex">
                         <ul class="js-tab p-feature__tab">
+                            <li><a href="#" id="js-tab__edit">クイック編集</a></li>
                             <li><a href="#" id="js-tab__board">無制限ボード</a></li>
                             <li><a href="#" id="js-tab__multiuser">マルチユーザー</a></li>
                             <li><a href="#" id="js-tab-realtime">リアルタイム</a></li>
                         </ul>
                         <div class="p-feature__content">
+                            <!--tab__edit-->
+                            <div id="js-tab__edit--content" class="js-tab-item">
+                                <div id="js-tab__edit--figures" class="p-feature__items">
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/edit_1.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            すばやく「Task」を追加
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/edit_2.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ドラッグ&ドロップで移動
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <p class="p-feature__paragraph">
+                                    ドラッグ&ドロップやショートカットで、軽快なタスク管理ができます。<br />「Task」も「Board」も、マウス操作で柔軟に入れ替えられます。
+
+                                </p>
+                            </div>
+                            <!--tab__board-->
                             <div id="js-tab__board--content" class="js-tab-item ">
                                 <div id="js-tab__board--figures" class="p-feature__items">
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/1.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/board_1.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ワークプロセスにあわせて「Board」を構成
+                                        </figcaption>
                                     </figure>
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/2.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/board_2.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">「Board」は複数増やせます
+                                        </figcaption>
                                     </figure>
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/3.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/board_3.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            チーム単位の「Board」を作るなど柔軟な構成
+                                        </figcaption>
                                     </figure>
                                 </div>
                                 <p class="p-feature__paragraph">
@@ -190,17 +231,26 @@
 
                                 </p>
                             </div>
+                            <!--tab__multiuser-->
                             <div id="js-tab__multiuser--content" class="js-tab-item">
 
                                 <div id="js-tab__multiuser--figures" class="p-feature__items">
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/1.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/user_1.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            マルチユーザーでコラボレーション
+                                        </figcaption>
                                     </figure>
+
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/2.jpg" class="c-resImg" />
-                                    </figure>
-                                    <figure class="p-feature__item">
-                                        <img src="/images/slide/3.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/user_2.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            アサイン状況も一目瞭然
+                                        </figcaption>
                                     </figure>
                                 </div>
                                 <p class="p-feature__paragraph">
@@ -209,16 +259,25 @@
                                     誰がどんなことをやっているのか、特定のメンバーに負荷が集中しすぎていないか、いつでも確認することができます。
                                 </p>
                             </div>
+                            <!--tab__realtime-->
                             <div id="js-tab-realtime--content" class="js-tab-item">
                                 <div id="js-tab-realtime--figures" class="p-feature__items">
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/1.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/real_1.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            リアルタイムでコラボレーション
+                                        </figcaption>
                                     </figure>
+
                                     <figure class="p-feature__item">
-                                        <img src="/images/slide/2.jpg" class="c-resImg" />
-                                    </figure>
-                                    <figure class="p-feature__item">
-                                        <img src="/images/slide/3.jpg" class="c-resImg" />
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/real_2.jpg" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ドラッグ&ドロップも即時反映
+                                        </figcaption>
                                     </figure>
                                 </div>
                                 <p class="p-feature__paragraph">
@@ -240,7 +299,7 @@
             </article>
         </main>
         <!--aside-->
-        <aside class="c-aside u-mt33">
+        <aside class="c-aside u-mt42">
             <section class="p-notice u-center">
                 <h2 class="p-notice__h2">デモご利用上のご注意</h2>
                 <p class="p-notice__paragraph">
