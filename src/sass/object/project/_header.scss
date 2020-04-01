@@ -30,20 +30,26 @@
   }
 
   &__screen {
+    position: relative;
     max-width: 876px;
-    max-height: 500px;
     margin-top: 40px;
     overflow: hidden;
     border-radius: $radiusL;
     border: solid 8px #ffffff21;
+    overflow: hidden;
     @include shadow;
-
-    & > img {
-      border-radius: $radiusS;
-    }
 
     @include mobile {
       margin-top: 23px;
     }
+  }
+
+  &__video {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: $radiusS;
   }
 }
