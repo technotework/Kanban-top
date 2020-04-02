@@ -4,7 +4,7 @@ import * as THREE from 'three';
 //init
 window.addEventListener("load", init);
 
-let renderer, box1, box2, scene, camera, w, h;
+let renderer, box1, box2, scene, camera, w, h, animateInitDuration;
 let animation = null;
 let isStart = false;
 
@@ -15,8 +15,10 @@ function init() {
 
   //モバイル回線向け遅延描画
   let timer = 0;
+  animateInitDuration = 200;
   if (navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i)) {
-    timer = 800;
+    timer = 500;
+    animateInitDuration = 600;
   }
   window.setTimeout(() => {
     window.addEventListener('resize', onResize);
@@ -159,9 +161,17 @@ function setPosition(w) {
  */
 function initAlpha() {
 
-  startAnimation();
-
   let initAlpha = $("#js-canvas").css("opacity");
+  startAnimation();
+  $("#js-canvas").css("opacity", 0);
+  $("#js-canvas").animate({ "opacity": initAlpha }, animateInitDuration, () => {
+    setupAlpha(initAlpha);
+  });
+
+}
+
+function setupAlpha(initAlpha) {
+
   const wrapper = document.getElementById("js-wrapper");
   wrapper.addEventListener('scroll', () => {
 
@@ -191,7 +201,6 @@ function initAlpha() {
     $("#js-canvas").css({ 'opacity': result });
 
   }, { passive: true });
-
 }
 
 /**
