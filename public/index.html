@@ -2,8 +2,22 @@
 <html lang="ja">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162562563-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162562563-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="「KANBAN」はチームコラボレーションに柔軟なタスク管理ツールです。">
+    <meta name="keywords" content="kanban,カンバン,カンバン方式,ToDo,タスク管理,チームコラボレーション,Webアプリ">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="canonical" href="https://kanban.technote.work/">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <script>
         (function (d) {
@@ -18,7 +32,7 @@
 
     <script src="/js/bundle.js"></script>
 
-    <title>Document</title>
+    <title>チームコラボレーション タスク管理ツール「KANBAN」by TECHNOTEWORK</title>
 </head>
 
 <body class="p-body">
@@ -34,7 +48,7 @@
                 <h1 class="p-header__logo u-center">
                     <img src="/images/logo.png" alt="KANBAN" class="c-resImg" />
                 </h1>
-                <a href="#" class="p-header__gitLink u-hover">
+                <a href="https://github.com/technotework/Kanban-tool" class="p-header__gitLink u-hover" target="_blank">
                     <img src="/images/git.png" alt="LinkToGit" class="c-resImg" />
                 </a>
                 <div id="js-youtube" class="p-header__screen u-center">
@@ -44,7 +58,7 @@
                 </div>
             </div>
             <div class="p-button-list l-flex-center u-center">
-                <a href="" class="c-button__primary">
+                <a href="/app/login" class="c-button__primary">
                     START DEMO
                 </a>
             </div>
@@ -292,7 +306,7 @@
                     </div>
                     <!--StartDemo-->
                     <div class="p-button-list l-flex-center u-mt22">
-                        <a href="" class="c-button__primary">
+                        <a href="/app/login" class="c-button__primary">
                             START DEMO
                         </a>
                     </div>
@@ -301,24 +315,24 @@
                 <section class="p-main__section">
 
                     <ul class="p-technologies__icons">
-                        <li><a href="https://storybook.js.org/" target="_blank"><img src="images/icon/1_storybook.png"
+                        <li><a href="https://storybook.js.org/" target="_blank"><img src="/images/icon/1_storybook.png"
                                     alt="Stroybook" class="c-resImg"></a></li>
-                        <li><a href="https://firebase.google.com/" target="_blank"><img src="images/icon/2_firebase.png"
-                                    alt="Firebase" class="c-resImg"></a></li>
+                        <li><a href="https://firebase.google.com/" target="_blank"><img
+                                    src="/images/icon/2_firebase.png" alt="Firebase" class="c-resImg"></a></li>
                         <li><a href="https://atomicdesign.bradfrost.com/" target="_blank"><img
-                                    src="images/icon/3_atomic.png" alt="Atomic Design" class="c-resImg"></a>
+                                    src="/images/icon/3_atomic.png" alt="Atomic Design" class="c-resImg"></a>
                         </li>
-                        <li><a href="https://jp.vuejs.org/index.html" target="_blank"><img src="images/icon/4_vue.png"
+                        <li><a href="https://jp.vuejs.org/index.html" target="_blank"><img src="/images/icon/4_vue.png"
                                     alt="Vue" class="c-resImg"></a>
                         </li>
-                        <li><a href="https://vuex.vuejs.org/ja/" target="_blank"><img src="images/icon/5_vuex.png"
+                        <li><a href="https://vuex.vuejs.org/ja/" target="_blank"><img src="/images/icon/5_vuex.png"
                                     alt="Vuex" class="c-resImg"></a>
                         </li>
-                        <li><a href="https://nodejs.org/ja/" target="_blank"><img src="images/icon/6_node.png"
+                        <li><a href="https://nodejs.org/ja/" target="_blank"><img src="/images/icon/6_node.png"
                                     alt="node.js" class="c-resImg"></a>
                         </li>
-                        <li><a href="https://jestjs.io/ja/" target="_blank"><img src="images/icon/7_jest.png" alt="Jest"
-                                    class="c-resImg"></a>
+                        <li><a href="https://jestjs.io/ja/" target="_blank"><img src="/images/icon/7_jest.png"
+                                    alt="Jest" class="c-resImg"></a>
                         </li>
                     </ul>
 
@@ -347,7 +361,9 @@
                 <div class="p-credit u-center l-flex-vcenter">
                     <small class="p-credit__copyright">BY TECHNOTEWORK</small>
                     <div class="p-credit__git">
-                        <img src="images/git_w.png" alt="github" class="c-resImg" />
+                        <a href="https://github.com/technotework/Kanban-tool" target="_blank">
+                            <img src="/images/git_w.png" alt="github" class="c-resImg" />
+                        </a>
                     </div>
                 </div>
             </a>
