@@ -1,19 +1,29 @@
+import $ from 'jquery';
 import * as THREE from 'three';
 
 //init
-window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("load", init);
 
 let renderer, box1, box2, scene, camera, w, h;
 let animation = null;
+let isStart = false;
 
 /**
  * 初期化
  */
 function init() {
 
-  window.addEventListener('resize', onResize);
-  init3D();
-  //startTic();
+  //モバイル回線向け遅延描画
+  let timer = 0;
+  if (navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i)) {
+    timer = 800;
+  }
+  window.setTimeout(() => {
+    window.addEventListener('resize', onResize);
+    init3D();
+    initAlpha();
+  }, timer);
+
 }
 
 /**
@@ -141,5 +151,67 @@ function setPosition(w) {
 
     box1.position.set(ratio(w, -1200, -2500), ratio(w, 700, 0), 0);
     box2.position.set(ratio(w, 1400, 2600), ratio(w, 2500, 2000), 0);
+  }
+}
+
+/**
+ * setupAlpha
+ */
+function initAlpha() {
+
+  startAnimation();
+
+  let initAlpha = $("#js-canvas").css("opacity");
+  const wrapper = document.getElementById("js-wrapper");
+  wrapper.addEventListener('scroll', () => {
+
+    //スクロール量に比例して背景を薄くする
+    const start = 50;
+    const end = start + 1000;
+    const startAlpha = initAlpha;
+    const endAlpha = 0;
+    let result;
+
+    let scroll = $("#js-wrapper").scrollTop();
+
+    if (scroll < start) {
+      result = initAlpha;
+      //startAnimation();
+
+    } else if (scroll < end) {
+      let a = (startAlpha - endAlpha) / (start - end);
+      let b = startAlpha - start * a;
+      result = Math.floor((scroll * a + b) * 100) / 100;
+      startAnimation();
+
+    } else if (scroll > end) {
+      result = endAlpha;
+      stopAnimation();
+    }
+    $("#js-canvas").css({ 'opacity': result });
+
+  }, { passive: true });
+
+}
+
+/**
+ * start trigger animation
+ */
+function startAnimation() {
+
+  if (isStart == false) {
+    startTic();
+    isStart = true;
+  }
+}
+
+/**
+ * start trigger animation
+ */
+function stopAnimation() {
+
+  if (isStart == true) {
+    endTic();
+    isStart = false;
   }
 }
