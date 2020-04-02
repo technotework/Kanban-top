@@ -28,6 +28,7 @@ function init() {
       rel: 0,
       showinfo: 0,
       modestbranding: 0,
+      origin: "https://kanban.technote.work/"
     }
 
   });

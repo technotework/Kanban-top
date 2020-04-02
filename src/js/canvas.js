@@ -4,6 +4,7 @@ import * as THREE from 'three';
 window.addEventListener("DOMContentLoaded", init);
 
 let renderer, box1, box2, scene, camera, w, h;
+let animation = null;
 
 /**
  * 初期化
@@ -12,7 +13,7 @@ function init() {
 
   window.addEventListener('resize', onResize);
   init3D();
-  tick();
+  //startTic();
 }
 
 /**
@@ -61,15 +62,25 @@ function init3D() {
   scene.add(ambientLight);
   onResize();
   renderer.render(scene, camera);
+
+}
+
+/**
+ * endTic
+ */
+let endTic = function () {
+  if (animation != null) {
+    window.cancelAnimationFrame(animation);
+    animation = null;
+  }
 }
 
 /**
  * TIC
  */
-function tick() {
+let startTic = function () {
 
-  requestAnimationFrame(tick);
-
+  animation = window.requestAnimationFrame(startTic);
   let unit1 = 0.0025;
   let unit2 = 0.004;
 
@@ -81,8 +92,9 @@ function tick() {
 
   // レンダリング
   renderer.render(scene, camera);
-
 }
+
+export { startTic, endTic };
 
 
 /**

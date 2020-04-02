@@ -1,4 +1,7 @@
 import $ from 'jquery';
+import { startTic, endTic } from './canvas'
+
+let isStart = false;
 
 /**
  * ready
@@ -11,6 +14,8 @@ $(() => {
  * 初期設定
  */
 function init() {
+
+  startAnimation();
 
   let initAlpha = $("#js-canvas").css("opacity");
 
@@ -27,15 +32,42 @@ function init() {
 
     if (scroll < start) {
       result = initAlpha;
+      //startAnimation();
+
     } else if (scroll < end) {
       let a = (startAlpha - endAlpha) / (start - end);
       let b = startAlpha - start * a;
       result = Math.floor((scroll * a + b) * 100) / 100;
+      startAnimation();
 
     } else if (scroll > end) {
       result = endAlpha;
+      stopAnimation();
     }
     $("#js-canvas").css({ 'opacity': result });
   });
 
+}
+
+/**
+ * start trigger animation
+ */
+function startAnimation() {
+
+  if (isStart == false) {
+    startTic();
+    isStart = true;
+  }
+}
+
+
+/**
+ * start trigger animation
+ */
+function stopAnimation() {
+
+  if (isStart == true) {
+    endTic();
+    isStart = false;
+  }
 }
