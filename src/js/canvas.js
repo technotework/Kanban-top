@@ -22,7 +22,7 @@ function init3D() {
 
   renderer = new THREE.WebGLRenderer({
     alpha: true,
-    canvas: document.querySelector("#top")
+    canvas: document.querySelector("#js-canvas-main")
   });
   renderer.setClearColor(0xffffff, 0);
 

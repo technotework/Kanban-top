@@ -38,12 +38,12 @@
 <body class="p-body">
 
     <div id="js-canvas" class="p-mainCanvas">
-        <canvas id="top"></canvas>
+        <canvas id="js-canvas-main"></canvas>
     </div>
 
     <div id="js-wrapper" class="p-wrapper">
         <!--header-->
-        <header>
+        <header id="js-pagetop">
             <div class="p-header">
                 <h1 class="p-header__logo u-center">
                     <img src="/images/logo.png" alt="KANBAN" class="c-resImg" />
@@ -341,6 +341,13 @@
             </article>
         </main>
         <!--aside-->
+        <div class="p-pagetop">
+            <div class="p-pagetop__link">
+                <a href="#js-pagetop">
+                    <img src="images/pagetop.png" class="c-resImg" 　 alt="pagetop" />
+                </a>
+            </div>
+        </div>
         <aside class="c-aside p-aside">
             <section class="p-notice u-center">
                 <h2 class="p-notice__h2">デモご利用上のご注意</h2>

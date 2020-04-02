@@ -1,4 +1,10 @@
 .p-main {
+
+  margin-bottom: 26px;
+  @include tablet{
+    margin-bottom: 30px;
+  }
+
   &__article {
     position: relative;
     max-width: 876px;

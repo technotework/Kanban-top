@@ -4,3 +4,4 @@ import "./spirit";
 import "./fade_bg"
 import "./tab"
 import "./youtube"
+import "./smoothScroll"

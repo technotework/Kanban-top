@@ -1,0 +1,14 @@
+.p-pagetop{
+
+  display: flex;
+  max-width: 876px;
+  margin: 0 auto;
+  justify-content: flex-end; 
+
+  &__link{
+  
+    width: 40px;
+    height: 20px;
+  }
+  
+}
