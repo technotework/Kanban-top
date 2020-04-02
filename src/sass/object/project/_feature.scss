@@ -85,11 +85,11 @@
   }
 
   &__caption {
-    @include textFactory(1.4rem, $text, "heavy");
-    
+    @include textFactory(1.4rem, $text, "bold");
+
     width: calc(100% - 100px);
     margin: 20px 0 0 50px;
-    padding:0.3rem 0 0.3rem 1rem;
+    padding: 0.3rem 0 0.3rem 1rem;
     letter-spacing: 0.2rem;
     background-color: #1fc737;
     border-radius: 5px;
@@ -131,18 +131,20 @@
   border-radius: 40px;
   cursor: pointer;
   z-index: 9000;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @include tablet{
-
+  @include tablet {
     bottom: 10px;
   }
-
 }
 
 .prev-arrow {
   left: 0;
+  background-image: url("/images/arrow_l.gif");
 }
 
 .next-arrow {
   right: 0;
+  background-image: url("/images/arrow_r.gif");
 }

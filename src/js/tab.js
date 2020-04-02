@@ -26,8 +26,8 @@ function setupSlide() {
   for (let i = 0; i < groups.length; i++) {
     let $target = $(groups[i]);
     $target.slick({
-      prevArrow: '<img src="images/arrow_l.png" alt="back" class="slide-arrow prev-arrow">',
-      nextArrow: '<img src="images/arrow_r.png" alt="next" class="slide-arrow next-arrow">'
+      prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+      nextArrow: '<div src="images/arrow_r.gif" alt="next" class="slide-arrow next-arrow"></div>'
 
     }
     );

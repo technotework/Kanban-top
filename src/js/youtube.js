@@ -1,7 +1,6 @@
-import YouTubePlayer from 'youtube-player';
 import $ from 'jquery';
 
-let $youtube;
+let $youtube, $iframe;
 let size = { w: 0, h: 0 };
 
 /**
@@ -17,21 +16,8 @@ $(() => {
 function init() {
 
   $youtube = $("#js-youtube");
+  $iframe = $("#js-youtube-iframe");
   resize();
-
-  let player;
-  player = YouTubePlayer('js-youtube-iframe', {
-    width: size.w,
-    height: size.h,
-    videoId: 'M5jh78v9KAw',
-    playerVars: {
-      rel: 0,
-      showinfo: 0,
-      modestbranding: 0,
-      origin: "https://kanban.technote.work/"
-    }
-
-  });
 
   $(window).resize(() => {
     resize();
@@ -45,4 +31,6 @@ function resize() {
   size.h = Math.floor(size.w * 0.5659) + "px";
 
   $youtube.height(size.h);
+  $iframe.width(size.w);
+  $iframe.height(size.h);
 }

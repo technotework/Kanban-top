@@ -70,9 +70,10 @@ function init(obj) {
   check(obj);
   resize(obj);
 
-  $("#js-wrapper").scroll(() => {
+  const wrapper = document.getElementById("js-wrapper");
+  wrapper.addEventListener('scroll', () => {
     check(obj);
-  });
+  }, { passive: true });
 
   $(window).resize(() => {
     check(obj);

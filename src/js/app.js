@@ -1,5 +1,5 @@
 import "../sass/index.scss";
-import "./canvas";
+import "./lazyloader";
 import "./spirit";
 import "./fade_bg"
 import "./tab"

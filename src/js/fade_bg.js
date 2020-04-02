@@ -18,8 +18,8 @@ function init() {
   startAnimation();
 
   let initAlpha = $("#js-canvas").css("opacity");
-
-  $("#js-wrapper").scroll(() => {
+  const wrapper = document.getElementById("js-wrapper");
+  wrapper.addEventListener('scroll', () => {
 
     //スクロール量に比例して背景を薄くする
     const start = 50;
@@ -45,7 +45,9 @@ function init() {
       stopAnimation();
     }
     $("#js-canvas").css({ 'opacity': result });
-  });
+
+  }, { passive: true });
+
 
 }
 

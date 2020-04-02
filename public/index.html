@@ -10,7 +10,6 @@
 
         gtag('config', 'UA-162562563-1');
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,18 +17,6 @@
     <meta name="keywords" content="kanban,カンバン,カンバン方式,ToDo,タスク管理,チームコラボレーション,Webアプリ">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="canonical" href="https://kanban.technote.work/">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'bmb0xyk',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-
     <script src="/js/bundle.js"></script>
 
     <title>チームコラボレーション タスク管理ツール「KANBAN」by TECHNOTEWORK</title>
@@ -49,13 +36,13 @@
                 <h1 class="p-header__logo u-center">
                     <img src="/images/logo.png" alt="KANBAN" class="c-resImg" />
                 </h1>
-                <a href="https://github.com/technotework/Kanban-tool" class="p-header__gitLink u-hover" target="_blank">
+                <a href="https://github.com/technotework/Kanban-tool" class="p-header__gitLink u-hover" rel="noopener"
+                    target="_blank">
                     <img src="/images/git.png" alt="LinkToGit" class="c-resImg" />
                 </a>
                 <div id="js-youtube" class="p-header__screen u-center">
-                    <div id="js-youtube-iframe" class="p-header__video">
-
-                    </div>
+                    <iframe id="js-youtube-iframe" src="https://www.youtube.com/embed/M5jh78v9KAw?rel=0" frameborder="0"
+                        allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="p-button-list l-flex-center u-center">
@@ -118,48 +105,58 @@
                     <!--figure-->
                     <div id="js-cards" class="p-figure-card">
                         <figuar class="p-figure-card__base">
-                            <img src="/images/fig_card_base.png" alt="" class="c-resImg" />
+                            <img src="/images/lazy.gif" data-src="/images/fig_card_base.gif" alt=""
+                                class="js-lazy c-resImg" />
                         </figuar>
 
                         <!--code-->
                         <div class="p-figure-card__coding">
                             <figuar class="p-figure-card__icon">
-                                <img src="/images/fig_man_kasei1_1.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei1_1.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                             <figuar class="p-figure-card__icon">
-                                <img src="/images/fig_man_kasei1_2.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei1_2.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                             <figuar class="p-figure-card__icon">
-                                <img src="/images/fig_man_kasei2.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei2.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                             <figuar class="p-figure-card__card">
-                                <img src="/images/fig_card_coding.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_coding.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                         </div>
 
                         <!--site-->
                         <div class="p-figure-card__site">
                             <figuar class="p-figure-card__icon">
-                                <img src="/images/fig_man_site.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_site.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                             <figuar class="p-figure-card__card">
-                                <img src="/images/fig_card_site.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_site.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                         </div>
 
                         <!--server-->
                         <div class="p-figure-card__server">
                             <figuar class="p-figure-card__icon">
-                                <img src="/images/fig_man_server.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_server.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                             <figuar class="p-figure-card__card">
-                                <img src="/images/fig_card_server.png" alt="" class="c-resImg" />
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_server.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
                         </div>
 
 
                         <a href="" id="js-replay" class="p-figure-card__replay">
-                            <img src="/images/replay.png" alt="replay" class="c-resImg" />
+                            <img src="/images/lazy.gif" data-src="/images/replay.png" alt="replay"
+                                class="js-lazy c-resImg" />
                         </a>
 
 
@@ -311,7 +308,7 @@
                         </div>
                     </div>
                     <!--StartDemo-->
-                    <div class="p-button-list l-flex-center u-mt22">
+                    <div class="p-button-list l-flex-center u-mt40">
                         <a href="/app/login" class="c-button__primary">
                             START DEMO
                         </a>
@@ -322,38 +319,45 @@
 
                     <ul class="p-technologies__icons">
                         <li>
-                            <a href="https://storybook.js.org/" target="_blank">
-                                <img src="/images/icon/1_storybook.png" alt="Stroybook" class="c-resImg">
+                            <a href="https://storybook.js.org/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/1_storybook.gif" alt="Stroybook"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://firebase.google.com/" target="_blank">
-                                <img src="/images/icon/2_firebase.png" alt="Firebase" class="c-resImg">
+                            <a href="https://firebase.google.com/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/2_firebase.gif" alt="Firebase"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://atomicdesign.bradfrost.com/" target="_blank">
-                                <img src="/images/icon/3_atomic.png" alt="Atomic Design" class="c-resImg">
+                            <a href="https://atomicdesign.bradfrost.com/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/3_atomic.gif"
+                                    alt="Atomic Design" class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://jp.vuejs.org/index.html" target="_blank">
-                                <img src="/images/icon/4_vue.png" alt="Vue" class="c-resImg">
+                            <a href="https://jp.vuejs.org/index.html" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/4_vue.gif" alt="Vue"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://vuex.vuejs.org/ja/" target="_blank">
-                                <img src="/images/icon/5_vuex.png" alt="Vuex" class="c-resImg">
+                            <a href="https://vuex.vuejs.org/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/5_vuex.gif" alt="Vuex"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://nodejs.org/ja/" target="_blank">
-                                <img src="/images/icon/6_node.png" alt="node.js" class="c-resImg">
+                            <a href="https://nodejs.org/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/6_node.gif" alt="node.js"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                         <li>
-                            <a href="https://jestjs.io/ja/" target="_blank">
-                                <img src="/images/icon/7_jest.png" alt="Jest" class="c-resImg">
+                            <a href="https://jestjs.io/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/7_jest.gif" alt="Jest"
+                                    class="js-lazy c-resImg">
                             </a>
                         </li>
                     </ul>
@@ -386,18 +390,37 @@
         </aside>
         <!--footer-->
         <footer class="c-footer">
-            <a href="" target="_blank" class="u-hover">
-                <div class="p-credit u-center l-flex-vcenter">
-                    <small class="p-credit__copyright">BY TECHNOTEWORK</small>
-                    <div class="p-credit__git">
-                        <a href="https://github.com/technotework/Kanban-tool" target="_blank">
-                            <img src="/images/git_w.png" alt="github" class="c-resImg" />
-                        </a>
-                    </div>
+
+            <div class="p-credit u-center l-flex-vcenter">
+                <small class="p-credit__copyright">BY TECHNOTEWORK</small>
+                <div class="p-credit__git">
+                    <a href="https://github.com/technotework/Kanban-tool" rel="noopener" target="_blank">
+                        <img src="/images/git_w.png" alt="github" class="c-resImg" />
+                    </a>
                 </div>
-            </a>
+            </div>
+
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Noto+Sans+JP:400,500,700']
+            }
+        });
+    </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'bmb0xyk',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
 </body>
 
 </html>
