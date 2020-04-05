@@ -31,6 +31,7 @@ function setupSlide() {
     for (let i = 0; i < groups.length; i++) {
         let $target = $(groups[i]);
         $target.slick({
+            lazyLoad: "ondemand",
             prevArrow: '<div class="slide-arrow prev-arrow"></div>',
             nextArrow:
                 '<div src="images/arrow_r.gif" alt="next" class="slide-arrow next-arrow"></div>',

@@ -1,706 +1,485 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-162562563-1"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
 
-            gtag("config", "UA-162562563-1");
-        </script>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta
-            name="description"
-            content="「KANBAN」はチームコラボレーションに柔軟なタスク管理ツールです。"
-        />
-        <meta
-            name="keywords"
-            content="kanban,カンバン,カンバン方式,ToDo,タスク管理,チームコラボレーション,Webアプリ"
-        />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://kanban.technote.work/" />
-        <script src="/js/bundle.js"></script>
+<head>
 
-        <title>
-            チームコラボレーション タスク管理ツール「KANBAN」by TECHNOTEWORK
-        </title>
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="「KANBAN」はチームコラボレーションに柔軟なタスク管理ツールです。" />
+    <meta name="keywords" content="kanban,カンバン,カンバン方式,ToDo,タスク管理,チームコラボレーション,Webアプリ" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="https://kanban.technote.work/" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"
+        media="screen and (max-width:374px)">
+    <script src="/js/index.bundle.js"></script>
 
-    <body class="p-body">
-        <div id="js-canvas" class="p-mainCanvas">
-            <canvas id="js-canvas-main"></canvas>
-        </div>
+    <title>
+        チームコラボレーション タスク管理ツール「KANBAN」by TECHNOTEWORK
+    </title>
+</head>
 
-        <div id="js-wrapper" class="p-wrapper">
-            <!--header-->
-            <header id="js-pagetop">
-                <div class="p-header">
-                    <h1 class="p-header__logo u-center">
-                        <img
-                            src="/images/logo.png"
-                            alt="KANBAN"
-                            class="c-resImg"
-                        />
-                    </h1>
-                    <a
-                        href="https://github.com/technotework/Kanban-tool"
-                        class="p-header__gitLink u-hover"
-                        rel="noopener"
-                        target="_blank"
-                    >
-                        <img
-                            src="/images/git.png"
-                            alt="LinkToGit"
-                            class="c-resImg"
-                        />
-                    </a>
-                    <div id="js-youtube" class="p-header__screen u-center">
-                        <iframe
-                            id="js-youtube-iframe"
-                            src="https://www.youtube.com/embed/M5jh78v9KAw?rel=0"
-                            frameborder="0"
-                            allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
+<body class="p-body">
+    <div id="js-canvas" class="p-mainCanvas">
+        <canvas id="js-canvas-main"></canvas>
+    </div>
+
+    <div id="js-wrapper" class="p-wrapper">
+        <!--header-->
+        <header id="js-pagetop">
+            <div class="p-header">
+                <h1 class="p-header__logo u-center">
+
+                    <picture class="c-resPic">
+                        <source type="image/webp" srcset="/images/webp/logo.webp" />
+                        <source type="image/jpf" srcset="images/jpf/logo.jpf" />
+                        <img src="/images/logo.png" alt="KANBAN" class="c-resImg" />
+                    </picture>
+
+                </h1>
+                <a href="https://github.com/technotework/Kanban-tool" class="p-header__gitLink u-hover" rel="noopener"
+                    target="_blank">
+                    <img src="/images/git.png" alt="LinkToGit" class="c-resImg" />
+                </a>
+                <div id="js-youtube" class="p-header__screen u-center">
+                    <iframe id="js-youtube-iframe" src="https://www.youtube.com/embed/M5jh78v9KAw?rel=0" frameborder="0"
+                        allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="p-button-list l-flex-center u-center">
+                <a href="/app/login" class="c-button__primary">
+                    START DEMO
+                </a>
+            </div>
+        </header>
+        <!--main-->
+        <main class="p-main">
+            <article class="p-main__article u-center">
+                <!--astro_img-->
+                <div id="js-astro" class="p-figure-astro">
+                    <div class="p-figure-astro-one">
+                        <figure class="p-figure-astro-one__main">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig1_main.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig1_main.jpf" />
+                                <img src="/images/fig1_main.png" alt="" class="c-resImg" />
+                            </picture>
+
+                        </figure>
+                        <figure class="p-figure-astro-one__hand">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig1_hand.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig1_hand.jpf" />
+                                <img src="/images/fig1_hand.png" alt="" class="c-resImg" />
+                            </picture>
+
+                        </figure>
+                        <figure class="p-figure-astro-one__line">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig1_line.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig1_line.jpf" />
+                                <img src="/images/fig1_line.png" alt="" class="c-resImg" />
+                            </picture>
+
+
+                        </figure>
+                    </div>
+                    <div class="p-figure-astro-two">
+                        <figure class="p-figure-astro-two__main">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig2_main.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig2_main.jpf" />
+                                <img src="/images/fig2_main.png" alt="" class="c-resImg" />
+                            </picture>
+
+                        </figure>
+                        <figure class="p-figure-astro-two__left">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig2_left.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig2_left.jpf" />
+                                <img src="/images/fig2_left.png" alt="" class="c-resImg" />
+                            </picture>
+
+                        </figure>
+                        <figure class="p-figure-astro-two__right">
+                            <picture class="c-resPic">
+                                <source type="image/webp" srcset="/images/webp/fig2_right.webp" />
+                                <source type="image/jpf" srcset="/images/jpf/fig2_right.jpf" />
+                                <img src="/images/fig2_right.png" alt="" class="c-resImg" />
+                            </picture>
+
+                        </figure>
                     </div>
                 </div>
-                <div class="p-button-list l-flex-center u-center">
-                    <a href="/app/login" class="c-button__primary">
-                        START DEMO
-                    </a>
-                </div>
-            </header>
-            <!--main-->
-            <main class="p-main">
-                <article class="p-main__article u-center">
-                    <!--astro_img-->
-                    <div id="js-astro" class="p-figure-astro">
-                        <div class="p-figure-astro-one">
-                            <figure class="p-figure-astro-one__main">
-                                <img
-                                    src="/images/fig1_main.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                            <figure class="p-figure-astro-one__hand">
-                                <img
-                                    src="/images/fig1_hand.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                            <figure class="p-figure-astro-one__line">
-                                <img
-                                    src="/images/fig1_line.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                        </div>
-                        <div class="p-figure-astro-two">
-                            <figure class="p-figure-astro-two__main">
-                                <img
-                                    src="/images/fig2_main.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                            <figure class="p-figure-astro-two__left">
-                                <img
-                                    src="/images/fig2_left.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                            <figure class="p-figure-astro-two__right">
-                                <img
-                                    src="/images/fig2_right.png"
-                                    alt=""
-                                    class="c-resImg"
-                                />
-                            </figure>
-                        </div>
-                    </div>
-                    <!--/astro_img-->
-                    <!--Lead-->
-                    <section class="p-main__section">
-                        <h2 class="p-main__h2 c-h2">
-                            Good Team<br />Collaboration?
-                        </h2>
-                        <p class="c-paragraph p-main__paragraph">
-                            素敵でワクワクするチームコラボレーションをしていますか？<br />
-                            誰が何をしているかわからない、進捗を共有するのに時間がかかる。<br
-                                class="u-pc-br"
-                            />
-                            そんな現場では、うまくいっているつもりでも、<br
-                                class="u-pc-br"
-                            />
-                            うっかりチームメイトが火星人に連れ去られていた、<br
-                                class="u-pc-br"
-                            />
-                            そんなトラブルが待ち構えているかもしれません。<br />
-                            チームを見える化するソリューションは？<br />
-                            そこに「KANBAN」がベストフィットします。
-                        </p>
-                    </section>
-                    <!--About-->
-                    <section class="p-main__section">
-                        <h2 class="p-main__h2 c-h2">WHAT’S<br />KANBAN?</h2>
-                        <!--figure-->
-                        <div id="js-cards" class="p-figure-card">
-                            <figuar class="p-figure-card__base">
-                                <img
-                                    src="/images/lazy.gif"
-                                    data-src="/images/fig_card_base.gif"
-                                    alt=""
-                                    class="js-lazy c-resImg"
-                                />
+                <!--/astro_img-->
+                <!--Lead-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">
+                        Good Team<br />Collaboration?
+                    </h2>
+                    <p class="c-paragraph p-main__paragraph">
+                        素敵でワクワクするチームコラボレーションをしていますか？<br />
+                        誰が何をしているかわからない、進捗を共有するのに時間がかかる。<br class="u-pc-br" />
+                        そんな現場では、うまくいっているつもりでも、<br class="u-pc-br" />
+                        うっかりチームメイトが火星人に連れ去られていた、<br class="u-pc-br" />
+                        そんなトラブルが待ち構えているかもしれません。<br />
+                        チームを見える化するソリューションは？<br />
+                        そこに「KANBAN」がベストフィットします。
+                    </p>
+                </section>
+                <!--About-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">WHAT’S<br />KANBAN?</h2>
+                    <!--figure-->
+                    <div id="js-cards" class="p-figure-card">
+                        <figuar class="p-figure-card__base">
+                            <img src="/images/lazy.gif" data-src="/images/fig_card_base.gif" alt=""
+                                class="js-lazy c-resImg" />
+                        </figuar>
+
+                        <!--code-->
+                        <div class="p-figure-card__coding">
+                            <figuar class="p-figure-card__icon">
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei1_1.png" alt=""
+                                    class="js-lazy c-resImg" />
                             </figuar>
-
-                            <!--code-->
-                            <div class="p-figure-card__coding">
-                                <figuar class="p-figure-card__icon">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_man_kasei1_1.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                                <figuar class="p-figure-card__icon">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_man_kasei1_2.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                                <figuar class="p-figure-card__icon">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_man_kasei2.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                                <figuar class="p-figure-card__card">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_card_coding.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                            </div>
-
-                            <!--site-->
-                            <div class="p-figure-card__site">
-                                <figuar class="p-figure-card__icon">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_man_site.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                                <figuar class="p-figure-card__card">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_card_site.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                            </div>
-
-                            <!--server-->
-                            <div class="p-figure-card__server">
-                                <figuar class="p-figure-card__icon">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_man_server.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                                <figuar class="p-figure-card__card">
-                                    <img
-                                        src="/images/lazy.gif"
-                                        data-src="/images/fig_card_server.png"
-                                        alt=""
-                                        class="js-lazy c-resImg"
-                                    />
-                                </figuar>
-                            </div>
-
-                            <a
-                                href=""
-                                id="js-replay"
-                                class="p-figure-card__replay"
-                            >
-                                <img
-                                    src="/images/lazy.gif"
-                                    data-src="/images/replay.png"
-                                    alt="replay"
-                                    class="js-lazy c-resImg"
-                                />
-                            </a>
+                            <figuar class="p-figure-card__icon">
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei1_2.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
+                            <figuar class="p-figure-card__icon">
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_kasei2.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
+                            <figuar class="p-figure-card__card">
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_coding.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
                         </div>
-                        <!--/figure-->
-                        <p class="c-paragraph p-main__paragraph">
-                            「KANBAN」はシンプルな、タスク管理・コラボレーションツールです。<br />
-                            仕事の進行プロセスを模した「Board」。<br />
-                            ToDoとアサインメンバーを記録した「Task」。<br /><br
-                                class="u-pc-br"
-                            />
 
-                            「Board」に貼ってある「Task」を見るだけで、<br
-                                class="u-pc-br"
-                            />
-                            誰が何をしているか、どれくらい仕事があるのか<br
-                                class="u-pc-br"
-                            />一目瞭然です。
-                        </p>
-                    </section>
-                    <!--Detail-->
-                    <section class="p-main__section">
-                        <h2 class="p-main__h2 c-h2">
-                            Feature
-                        </h2>
-                        <div class="p-feature l-flex">
-                            <ul class="js-tab p-feature__tab">
-                                <li>
-                                    <a href="" id="js-tab__edit"
-                                        >クイック編集</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="" id="js-tab__board"
-                                        >無制限ボード</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="" id="js-tab__multiuser"
-                                        >マルチユーザー</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="" id="js-tab-realtime"
-                                        >リアルタイム</a
-                                    >
-                                </li>
-                            </ul>
-                            <div class="p-feature__content">
-                                <!--tab__edit-->
-                                <div
-                                    id="js-tab__edit--content"
-                                    class="js-tab-item"
-                                >
-                                    <div
-                                        id="js-tab__edit--figures"
-                                        class="p-feature__items"
-                                    >
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/edit_1.jpg"
-                                                    alt="すばやく「Task」を追加"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                すばやく「Task」を追加
-                                            </figcaption>
-                                        </figure>
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/edit_2.jpg"
-                                                    alt="ドラッグ&ドロップで移動"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                ドラッグ&ドロップで移動
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <p class="p-feature__paragraph">
-                                        ドラッグ&ドロップやショートカットで、軽快なタスク管理ができます。<br />「Task」も「Board」も、マウス操作で柔軟に入れ替えられます。
-                                    </p>
-                                </div>
-                                <!--tab__board-->
-                                <div
-                                    id="js-tab__board--content"
-                                    class="js-tab-item"
-                                >
-                                    <div
-                                        id="js-tab__board--figures"
-                                        class="p-feature__items"
-                                    >
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/board_1.jpg"
-                                                    alt="ワークプロセスにあわせて「Board」を構成"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                ワークプロセスにあわせて「Board」を構成
-                                            </figcaption>
-                                        </figure>
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/board_2.jpg"
-                                                    alt="「Board」は複数増やせます"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                「Board」は複数増やせます
-                                            </figcaption>
-                                        </figure>
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/board_3.jpg"
-                                                    alt="チーム単位の「Board」を作るなど柔軟な構成"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                チーム単位の「Board」を作るなど柔軟な構成
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <p class="p-feature__paragraph">
-                                        「Board」はいくつでも増やすことができます。<br
-                                            class="u-pc-br"
-                                        />
-                                        このことがシンプルで柔軟な作業プロセスとタスク管理を可能にしています。<br />
-                                        例えば、急な対応による作業プロセスの変更でも「Board」を追加するだけ。
-                                        他にも、1つの「Board」を作業チーム単位や、メンバー単位、テーマの単位として見立てるなど自由自在に活用することができます。
-                                    </p>
-                                </div>
-                                <!--tab__multiuser-->
-                                <div
-                                    id="js-tab__multiuser--content"
-                                    class="js-tab-item"
-                                >
-                                    <div
-                                        id="js-tab__multiuser--figures"
-                                        class="p-feature__items"
-                                    >
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/user_1.jpg"
-                                                    alt="マルチユーザーでコラボレーション"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                マルチユーザーでコラボレーション
-                                            </figcaption>
-                                        </figure>
-
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/user_2.jpg"
-                                                    alt="アサイン状況も一目瞭然"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                アサイン状況も一目瞭然
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <p class="p-feature__paragraph">
-                                        「KANBAN」はマルチユーザーで利用することができます。<br
-                                            class="u-pc-br"
-                                        />
-                                        参加しているユーザーのリストから「Task」にアサインするメンバーを選べます。<br />
-                                        誰がどんなことをやっているのか、特定のメンバーに負荷が集中しすぎていないか、いつでも確認することができます。
-                                    </p>
-                                </div>
-                                <!--tab__realtime-->
-                                <div
-                                    id="js-tab-realtime--content"
-                                    class="js-tab-item"
-                                >
-                                    <div
-                                        id="js-tab-realtime--figures"
-                                        class="p-feature__items"
-                                    >
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/real_1.jpg"
-                                                    alt="リアルタイムでコラボレーション"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                リアルタイムでコラボレーション
-                                            </figcaption>
-                                        </figure>
-
-                                        <figure class="p-feature__item">
-                                            <div class="p-feature__img">
-                                                <img
-                                                    src="/images/slide/real_2.jpg"
-                                                    alt="ドラッグ&ドロップも即時反映"
-                                                    class="c-resImg"
-                                                />
-                                            </div>
-                                            <figcaption
-                                                class="p-feature__caption"
-                                            >
-                                                ドラッグ&ドロップも即時反映
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <p class="p-feature__paragraph">
-                                        「KANBAN」はリアルタイムで更新されます。<br />
-                                        他のユーザーが編集しているタスクはロックされ、アイコンが表示されます。<br />
-                                        タスクのドラッグ&ドロップ移動も瞬時に反映されます。<br
-                                            class="u-pc-br"
-                                        />
-                                        まるで、実際の模造紙と付箋を使って同時に作業しているかのような、ライブ感のあるタスク管理ができます。
-                                    </p>
-                                </div>
-                            </div>
+                        <!--site-->
+                        <div class="p-figure-card__site">
+                            <figuar class="p-figure-card__icon">
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_site.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
+                            <figuar class="p-figure-card__card">
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_site.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
                         </div>
-                        <!--StartDemo-->
-                        <div class="p-button-list l-flex-center u-mt40">
-                            <a href="/app/login" class="c-button__primary">
-                                START DEMO
-                            </a>
+
+                        <!--server-->
+                        <div class="p-figure-card__server">
+                            <figuar class="p-figure-card__icon">
+                                <img src="/images/lazy.gif" data-src="/images/fig_man_server.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
+                            <figuar class="p-figure-card__card">
+                                <img src="/images/lazy.gif" data-src="/images/fig_card_server.png" alt=""
+                                    class="js-lazy c-resImg" />
+                            </figuar>
                         </div>
-                    </section>
-                    <!--icon-->
-                    <section class="p-main__section">
-                        <ul class="p-technologies__icons">
+
+                        <a href="" id="js-replay" class="p-figure-card__replay">
+                            <img src="/images/lazy.gif" data-src="/images/replay.png" alt="replay"
+                                class="js-lazy c-resImg" />
+                        </a>
+                    </div>
+                    <!--/figure-->
+                    <p class="c-paragraph p-main__paragraph">
+                        「KANBAN」はシンプルな、タスク管理・コラボレーションツールです。<br />
+                        仕事の進行プロセスを模した「Board」。<br />
+                        ToDoとアサインメンバーを記録した「Task」。<br /><br class="u-pc-br" />
+
+                        「Board」に貼ってある「Task」を見るだけで、<br class="u-pc-br" />
+                        誰が何をしているか、どれくらい仕事があるのか<br class="u-pc-br" />一目瞭然です。
+                    </p>
+                </section>
+                <!--Detail-->
+                <section class="p-main__section">
+                    <h2 class="p-main__h2 c-h2">
+                        Feature
+                    </h2>
+                    <div class="p-feature l-flex">
+                        <ul class="js-tab p-feature__tab">
                             <li>
-                                <a
-                                    href="https://storybook.js.org/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/1_storybook.gif"
-                                        alt="Stroybook"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
+                                <a href="" id="js-tab__edit">クイック編集</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://firebase.google.com/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/2_firebase.gif"
-                                        alt="Firebase"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
+                                <a href="" id="js-tab__board">無制限ボード</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://atomicdesign.bradfrost.com/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/3_atomic.gif"
-                                        alt="Atomic Design"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
+                                <a href="" id="js-tab__multiuser">マルチユーザー</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://jp.vuejs.org/index.html"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/4_vue.gif"
-                                        alt="Vue"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://vuex.vuejs.org/ja/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/5_vuex.gif"
-                                        alt="Vuex"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://nodejs.org/ja/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/6_node.gif"
-                                        alt="node.js"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://jestjs.io/ja/"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    <img
-                                        src="/images/icon/lazy.gif"
-                                        data-src="/images/icon/7_jest.gif"
-                                        alt="Jest"
-                                        class="js-lazy c-resImg"
-                                    />
-                                </a>
+                                <a href="" id="js-tab-realtime">リアルタイム</a>
                             </li>
                         </ul>
+                        <div class="p-feature__content">
+                            <!--tab__edit-->
+                            <div id="js-tab__edit--content" class="js-tab-item">
+                                <div id="js-tab__edit--figures" class="p-feature__items">
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/edit_1.jpg"
+                                                alt="すばやく「Task」を追加" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            すばやく「Task」を追加
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/edit_2.jpg"
+                                                alt="ドラッグ&ドロップで移動" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ドラッグ&ドロップで移動
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <p class="p-feature__paragraph">
+                                    ドラッグ&ドロップやショートカットで、軽快なタスク管理ができます。<br />「Task」も「Board」も、マウス操作で柔軟に入れ替えられます。
+                                </p>
+                            </div>
+                            <!--tab__board-->
+                            <div id="js-tab__board--content" class="js-tab-item">
+                                <div id="js-tab__board--figures" class="p-feature__items">
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/board_1.jpg"
+                                                alt="ワークプロセスにあわせて「Board」を構成" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ワークプロセスにあわせて「Board」を構成
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/board_2.jpg"
+                                                alt="「Board」は複数増やせます" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            「Board」は複数増やせます
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/board_3.jpg"
+                                                alt="チーム単位の「Board」を作るなど柔軟な構成" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            チーム単位の「Board」を作るなど柔軟な構成
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <p class="p-feature__paragraph">
+                                    「Board」はいくつでも増やすことができます。<br class="u-pc-br" />
+                                    このことがシンプルで柔軟な作業プロセスとタスク管理を可能にしています。<br />
+                                    例えば、急な対応による作業プロセスの変更でも「Board」を追加するだけ。
+                                    他にも、1つの「Board」を作業チーム単位や、メンバー単位、テーマの単位として見立てるなど自由自在に活用することができます。
+                                </p>
+                            </div>
+                            <!--tab__multiuser-->
+                            <div id="js-tab__multiuser--content" class="js-tab-item">
+                                <div id="js-tab__multiuser--figures" class="p-feature__items">
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/user_1.jpg"
+                                                alt="マルチユーザーでコラボレーション" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            マルチユーザーでコラボレーション
+                                        </figcaption>
+                                    </figure>
 
-                        <h2 class="p-technologies__h2 c-h2">
-                            Uses modern front-end technologies
-                        </h2>
-                    </section>
-                </article>
-            </main>
-            <!--aside-->
-            <div class="p-pagetop">
-                <div class="p-pagetop__link">
-                    <a href="#js-pagetop">
-                        <img
-                            src="images/pagetop.png"
-                            class="c-resImg"
-                            alt="pagetop"
-                        />
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/user_2.jpg"
+                                                alt="アサイン状況も一目瞭然" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            アサイン状況も一目瞭然
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <p class="p-feature__paragraph">
+                                    「KANBAN」はマルチユーザーで利用することができます。<br class="u-pc-br" />
+                                    参加しているユーザーのリストから「Task」にアサインするメンバーを選べます。<br />
+                                    誰がどんなことをやっているのか、特定のメンバーに負荷が集中しすぎていないか、いつでも確認することができます。
+                                </p>
+                            </div>
+                            <!--tab__realtime-->
+                            <div id="js-tab-realtime--content" class="js-tab-item">
+                                <div id="js-tab-realtime--figures" class="p-feature__items">
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/real_1.jpg"
+                                                alt="リアルタイムでコラボレーション" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            リアルタイムでコラボレーション
+                                        </figcaption>
+                                    </figure>
+
+                                    <figure class="p-feature__item">
+                                        <div class="p-feature__img">
+                                            <img src="/images/slide/lazy.gif" data-lazy="/images/slide/real_2.jpg"
+                                                alt="ドラッグ&ドロップも即時反映" class="c-resImg" />
+                                        </div>
+                                        <figcaption class="p-feature__caption">
+                                            ドラッグ&ドロップも即時反映
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <p class="p-feature__paragraph">
+                                    「KANBAN」はリアルタイムで更新されます。<br />
+                                    他のユーザーが編集しているタスクはロックされ、アイコンが表示されます。<br />
+                                    タスクのドラッグ&ドロップ移動も瞬時に反映されます。<br class="u-pc-br" />
+                                    まるで、実際の模造紙と付箋を使って同時に作業しているかのような、ライブ感のあるタスク管理ができます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--StartDemo-->
+                    <div class="p-button-list l-flex-center u-mt40">
+                        <a href="/app/login" class="c-button__primary">
+                            START DEMO
+                        </a>
+                    </div>
+                </section>
+                <!--icon-->
+                <section class="p-main__section">
+                    <ul class="p-technologies__icons">
+                        <li>
+                            <a href="https://storybook.js.org/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/1_storybook.gif" alt="Stroybook"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://firebase.google.com/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/2_firebase.gif" alt="Firebase"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://atomicdesign.bradfrost.com/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/3_atomic.gif"
+                                    alt="Atomic Design" class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://jp.vuejs.org/index.html" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/4_vue.gif" alt="Vue"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vuex.vuejs.org/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/5_vuex.gif" alt="Vuex"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://nodejs.org/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/6_node.gif" alt="node.js"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://jestjs.io/ja/" target="_blank" rel="noopener">
+                                <img src="/images/icon/lazy.gif" data-src="/images/icon/7_jest.gif" alt="Jest"
+                                    class="js-lazy c-resImg" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h2 class="p-technologies__h2 c-h2">
+                        Uses modern front-end technologies
+                    </h2>
+                </section>
+            </article>
+        </main>
+        <!--aside-->
+        <div class="p-pagetop">
+            <div class="p-pagetop__link">
+                <a href="#js-pagetop">
+                    <img src="images/pagetop.png" class="c-resImg" alt="pagetop" />
+                </a>
+            </div>
+        </div>
+        <aside class="c-aside p-aside">
+            <section class="p-notice u-center">
+                <h2 class="p-notice__h2">デモご利用上のご注意</h2>
+                <p class="p-notice__paragraph">
+                    「KANBAN」(以下本デモ)は技術デモを目的として公開されたサービスです。<br />
+                    ご利用上の注意点を記載いたしますので、同意していただいた上、ご利用ください。<br />
+                    本デモは実際のサービスの保守・運用・機能の提供を目的としたものではありません。<br />
+                    デモ用のログインID・パスワードを関係者以外に伝達することはお控えください。<br />
+                    登録ユーザー情報および入力データは一定期間後削除されます。<br />
+                    本デモに機密情報、個人情報を入力しないようにお願いします。<br />
+                    無断転載を禁じます。
+                </p>
+            </section>
+        </aside>
+        <!--footer-->
+        <footer class="c-footer">
+            <div class="p-credit u-center l-flex-vcenter">
+                <small class="p-credit__copyright">BY TECHNOTEWORK</small>
+                <div class="p-credit__git">
+                    <a href="https://github.com/technotework/Kanban-tool" rel="noopener" target="_blank">
+                        <img src="/images/git_w.png" alt="github" class="c-resImg" />
                     </a>
                 </div>
             </div>
-            <aside class="c-aside p-aside">
-                <section class="p-notice u-center">
-                    <h2 class="p-notice__h2">デモご利用上のご注意</h2>
-                    <p class="p-notice__paragraph">
-                        「KANBAN」(以下本デモ)は技術デモを目的として公開されたサービスです。<br />
-                        ご利用上の注意点を記載いたしますので、同意していただいた上、ご利用ください。<br />
-                        本デモは実際のサービスの保守・運用・機能の提供を目的としたものではありません。<br />
-                        デモ用のログインID・パスワードを関係者以外に伝達することはお控えください。<br />
-                        登録ユーザー情報および入力データは一定期間後削除されます。<br />
-                        本デモに機密情報、個人情報を入力しないようにお願いします。<br />
-                        無断転載を禁じます。
-                    </p>
-                </section>
-            </aside>
-            <!--footer-->
-            <footer class="c-footer">
-                <div class="p-credit u-center l-flex-vcenter">
-                    <small class="p-credit__copyright">BY TECHNOTEWORK</small>
-                    <div class="p-credit__git">
-                        <a
-                            href="https://github.com/technotework/Kanban-tool"
-                            rel="noopener"
-                            target="_blank"
-                        >
-                            <img
-                                src="/images/git_w.png"
-                                alt="github"
-                                class="c-resImg"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script>
-            WebFont.load({
-                google: {
-                    families: ["Noto+Sans+JP:400,500,700"],
-                },
-            });
-        </script>
-        <script>
-            (function (d) {
-                var config = {
-                        kitId: "bmb0xyk",
-                        scriptTimeout: 3000,
-                        async: true,
-                    },
-                    h = d.documentElement,
-                    t = setTimeout(function () {
-                        h.className =
-                            h.className.replace(/\bwf-loading\b/g, "") +
-                            " wf-inactive";
-                    }, config.scriptTimeout),
-                    tk = d.createElement("script"),
-                    f = false,
-                    s = d.getElementsByTagName("script")[0],
-                    a;
-                h.className += " wf-loading";
-                tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-                tk.async = true;
-                tk.onload = tk.onreadystatechange = function () {
-                    a = this.readyState;
-                    if (f || (a && a != "complete" && a != "loaded")) return;
-                    f = true;
-                    clearTimeout(t);
-                    try {
-                        Typekit.load(config);
-                    } catch (e) {}
-                };
-                s.parentNode.insertBefore(tk, s);
-            })(document);
-        </script>
-    </body>
+        </footer>
+    </div>
+
+    <script src="/js/animations.bundle.js" defer></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: "bmb0xyk",
+                scriptTimeout: 3000,
+                async: true,
+            },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className =
+                        h.className.replace(/\bwf-loading\b/g, "") +
+                        " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || (a && a != "complete" && a != "loaded")) return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config);
+                } catch (e) { }
+            };
+            s.parentNode.insertBefore(tk, s);
+        })(document);
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162562563-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-162562563-1");
+    </script>
+</body>
+
 </html>
