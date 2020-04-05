@@ -1,50 +1,50 @@
 .p-technologies {
-  &__icons {
-    width: 662px;
-    margin: 87px auto 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
+    &__icons {
+        width: 662px;
+        margin: 87px auto 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
 
-    @include tablet {
-      width: 100%;
-      padding: 0 15px;
-      margin: 60px auto 0 auto;
+        @include tablet {
+            width: 100%;
+            padding: 0 15px;
+            margin: 60px auto 0 auto;
+        }
+
+        > li {
+            padding: 0 19px;
+
+            @include tablet {
+                padding: 0 10px;
+            }
+        }
+
+        > li:first-child {
+            padding: 0 19px 0 0;
+
+            @include tablet {
+                padding: 0 10px 0 0;
+            }
+        }
+
+        > li:last-child {
+            padding: 0 0 0 19px;
+            @include tablet {
+                padding: 0 0 0 10px;
+            }
+        }
     }
+    &__h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        letter-spacing: 0.3rem;
+        margin-top: 25px;
 
-    > li{
-      padding:0 19px;
-
-      @include tablet{
-        padding:0 10px;
-      }
+        @include tablet {
+            line-height: 3rem;
+            padding: 0 0 0 10px;
+        }
     }
-
-    > li:first-child{
-      padding:0 19px 0 0;
-
-      @include tablet{
-        padding:0 10px 0 0;
-      }
-    }
-
-    > li:last-child{
-      padding:0 0 0 19px;
-      @include tablet{
-        padding:0 0 0 10px;
-      }
-    }
-  }
-  &__h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
-    margin-top: 25px;
-
-    @include tablet{
-      line-height: 3rem;
-      padding:0 0 0 10px;
-    }
-  }
 }

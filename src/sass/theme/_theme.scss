@@ -36,10 +36,10 @@ $button-side-margin: 4px;
 base
 =========================*/
 @mixin base {
-  @include ff;
-  @include textFactory($f16, $text, "medium");
-  @include containerFactory($base, 0, 0 0 0 0);
-  font-feature-settings: "palt" 1;
+    @include ff;
+    @include textFactory($f16, $text, "medium");
+    @include containerFactory($base, 0, 0 0 0 0);
+    font-feature-settings: "palt" 1;
 }
 
 /*=========================
@@ -59,10 +59,10 @@ h
 =========================*/
 
 @mixin h2 {
-  @include textFactory(3.2rem, $text, "en");
-  line-height: 3.8rem;
-  letter-spacing: 0.08rem;
-  font-feature-settings: "palt" 1;
+    @include textFactory(3.2rem, $text, "en");
+    line-height: 3.8rem;
+    letter-spacing: 0.08rem;
+    font-feature-settings: "palt" 1;
 }
 
 /*=========================
@@ -70,14 +70,14 @@ p
 =========================*/
 
 @mixin p {
-  @include textFactory(1.6rem, $text, "medium");
-  letter-spacing: 0.17rem;
-  line-height: 3.3rem;
- 
-  @include tablet{
-    @include textFactory(1.5rem, $text, "medium");
-    text-align: justify;  
-  }
+    @include textFactory(1.6rem, $text, "medium");
+    letter-spacing: 0.17rem;
+    line-height: 3.3rem;
+
+    @include tablet {
+        @include textFactory(1.5rem, $text, "medium");
+        text-align: justify;
+    }
 }
 
 /*=========================

@@ -2,32 +2,32 @@
 center
 =========================*/
 .u-center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*=========================
 opacity hover
 =========================*/
 .u-hover {
-  opacity: 1;
+    opacity: 1;
 
-  &:hover {
-    opacity: 0.8;
-  }
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 /*=========================
 mobile br
 =========================*/
 .u-pc-br {
-  display: inline;
+    display: inline;
 }
 
 @include responsive($break_br) {
-  .u-pc-br {
-    display: none;
-  }
+    .u-pc-br {
+        display: none;
+    }
 }
 
 /*=========================
@@ -37,34 +37,34 @@ $margin-min: 1;
 $margin-max: 200;
 
 @for $i from $margin-min through $margin-max {
-  .u-mt#{$i} {
-    margin-top: #{$i}px;
-  }
-  .u-mr#{$i} {
-    margin-right: #{$i}px;
-  }
-  .u-mb#{$i} {
-    margin-bottom: #{$i}px;
-  }
-  .u-ml#{$i} {
-    margin-left: #{$i}px;
-  }
+    .u-mt#{$i} {
+        margin-top: #{$i}px;
+    }
+    .u-mr#{$i} {
+        margin-right: #{$i}px;
+    }
+    .u-mb#{$i} {
+        margin-bottom: #{$i}px;
+    }
+    .u-ml#{$i} {
+        margin-left: #{$i}px;
+    }
 }
 
 $padding-min: 1;
 $padding-max: 200;
 
 @for $i from $padding-min through $padding-max {
-  .u-pt#{$i} {
-    padding-top: #{$i}px;
-  }
-  .u-pr#{$i} {
-    padding-right: #{$i}px;
-  }
-  .u-pb#{$i} {
-    padding-bottom: #{$i}px;
-  }
-  .u-pl#{$i} {
-    padding-left: #{$i}px;
-  }
+    .u-pt#{$i} {
+        padding-top: #{$i}px;
+    }
+    .u-pr#{$i} {
+        padding-right: #{$i}px;
+    }
+    .u-pb#{$i} {
+        padding-bottom: #{$i}px;
+    }
+    .u-pl#{$i} {
+        padding-left: #{$i}px;
+    }
 }

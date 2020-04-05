@@ -1,28 +1,28 @@
 .p-notice {
-  max-width: $baseWidht;
-  padding: 34px 0 53px 0;
-  background-color: $theme;
+    max-width: $baseWidht;
+    padding: 34px 0 53px 0;
+    background-color: $theme;
 
-  &__h2 {
-    @include textFactory(1.6rem, $white, "medium");
-    font-feature-settings: "palt" 1;
-    line-height: 3.3rem;
-    letter-spacing: 0.43rem;
-    padding-bottom: 28px;
-    @include tablet {
-      padding: 0 10px;
+    &__h2 {
+        @include textFactory(1.6rem, $white, "medium");
+        font-feature-settings: "palt" 1;
+        line-height: 3.3rem;
+        letter-spacing: 0.43rem;
+        padding-bottom: 28px;
+        @include tablet {
+            padding: 0 10px;
+        }
     }
-  }
 
-  &__paragraph {
-    @include textFactory(1.4rem, $white, "regular");
-    line-height: 3.1rem;
-    letter-spacing: 0.26rem;
-    padding-left: 28px;
-    @include tablet {
-      font-size: 1.25rem;
-      line-height: 2.1rem;
-      padding: 10px 20px 0 20px;
+    &__paragraph {
+        @include textFactory(1.4rem, $white, "regular");
+        line-height: 3.1rem;
+        letter-spacing: 0.26rem;
+        padding-left: 28px;
+        @include tablet {
+            font-size: 1.25rem;
+            line-height: 2.1rem;
+            padding: 10px 20px 0 20px;
+        }
     }
-  }
 }

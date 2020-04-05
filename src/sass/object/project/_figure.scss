@@ -1,190 +1,190 @@
 /*宇宙飛行士アセット*/
 
 .p-figure-astro {
-  position: relative;
-  max-width: 876px;
-  height: 394px;
+    position: relative;
+    max-width: 876px;
+    height: 394px;
 
-  @include responsive(750px) {
-  }
-  @include responsive(580px) {
-  }
-  @include responsive(480px) {
-    height: 327px;
-  }
+    @include responsive(750px) {
+    }
+    @include responsive(580px) {
+    }
+    @include responsive(480px) {
+        height: 327px;
+    }
 }
 
 .p-figure-astro-one {
-  position: absolute;
-  top: 0;
-  right: -88px;
-  width: 542px;
-  height: 482px;
-  z-index: 1000;
-
-  @include responsive(750px) {
-    top: 40px;
-    right: -120px;
-  }
-  @include responsive(580px) {
-    top: 40px;
-    right: -150px;
-  }
-  @include responsive(480px) {
-    top: -11px;
-    right: -256px;
-  }
-
-  &__main {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 476px;
+    right: -88px;
+    width: 542px;
     height: 482px;
-    z-index: 910;
-  }
-  &__hand {
-    position: absolute;
-    top: 219px;
-    left: 272px;
-    width: 103px;
-    height: 100px;
-    z-index: 920;
-  }
-  &__line {
-    position: absolute;
-    top: 255px;
-    left: 393px;
-    width: 149px;
-    height: 104px;
-    z-index: 900;
-  }
+    z-index: 1000;
+
+    @include responsive(750px) {
+        top: 40px;
+        right: -120px;
+    }
+    @include responsive(580px) {
+        top: 40px;
+        right: -150px;
+    }
+    @include responsive(480px) {
+        top: -11px;
+        right: -256px;
+    }
+
+    &__main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 476px;
+        height: 482px;
+        z-index: 910;
+    }
+    &__hand {
+        position: absolute;
+        top: 219px;
+        left: 272px;
+        width: 103px;
+        height: 100px;
+        z-index: 920;
+    }
+    &__line {
+        position: absolute;
+        top: 255px;
+        left: 393px;
+        width: 149px;
+        height: 104px;
+        z-index: 900;
+    }
 }
 
 .p-figure-astro-two {
-  position: absolute;
-  top: -60px;
-  left: -15px;
-  width: 343px;
-  height: 207px;
-  z-index: 1000;
-
-  @include responsive(750px) {
-    left: -70px;
-    top: -100px;
-  }
-
-  @include responsive(580px) {
-    left: -130px;
-    top: -100px;
-  }
-
-  @include responsive(480px) {
-    left: -210px;
-    top: -240px;
-  }
-
-  &__main {
     position: absolute;
-    top: 17px;
-    left: 64px;
-    width: 245px;
-    height: 189px;
-    z-index: 930;
-  }
-  &__left {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 137px;
-    height: 96px;
-    z-index: 920;
-  }
-  &__right {
-    position: absolute;
-    top: 0;
-    left: 132px;
-    width: 211px;
-    height: 128px;
-    z-index: 900;
-  }
+    top: -60px;
+    left: -15px;
+    width: 343px;
+    height: 207px;
+    z-index: 1000;
+
+    @include responsive(750px) {
+        left: -70px;
+        top: -100px;
+    }
+
+    @include responsive(580px) {
+        left: -130px;
+        top: -100px;
+    }
+
+    @include responsive(480px) {
+        left: -210px;
+        top: -240px;
+    }
+
+    &__main {
+        position: absolute;
+        top: 17px;
+        left: 64px;
+        width: 245px;
+        height: 189px;
+        z-index: 930;
+    }
+    &__left {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 137px;
+        height: 96px;
+        z-index: 920;
+    }
+    &__right {
+        position: absolute;
+        top: 0;
+        left: 132px;
+        width: 211px;
+        height: 128px;
+        z-index: 900;
+    }
 }
 
 /*カードアセット*/
 
 .p-figure-card {
-  position: relative;
-  width: $baseWidht;
-  height: 446px;
-  margin: 42px 0 5px -39px;
-  transform-origin: left top;
+    position: relative;
+    width: $baseWidht;
+    height: 446px;
+    margin: 42px 0 5px -39px;
+    transform-origin: left top;
 
-  @include responsive(830px) {
-    margin: 42px 0 5px 5px;
-  }
+    @include responsive(830px) {
+        margin: 42px 0 5px 5px;
+    }
 
-  &__base {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 743px;
-    height: 423px;
-    z-index: 800;
-  }
+    &__base {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 743px;
+        height: 423px;
+        z-index: 800;
+    }
 
-  &__cards {
-    position: absolute;
-    width: 182px;
-    height: 108px;
-  }
+    &__cards {
+        position: absolute;
+        width: 182px;
+        height: 108px;
+    }
 
-  &__card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 172px;
-    height: 97px;
-    z-index: 900;
-  }
+    &__card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 172px;
+        height: 97px;
+        z-index: 900;
+    }
 
-  &__icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 93px;
-    height: 54px;
-    z-index: 1000;
-  }
+    &__icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 93px;
+        height: 54px;
+        z-index: 1000;
+    }
 
-  &__coding {
-    @extend .p-figure-card__cards;
-    top: 160px;
-    left: 95px;
-    z-index: 800;
-  }
+    &__coding {
+        @extend .p-figure-card__cards;
+        top: 160px;
+        left: 95px;
+        z-index: 800;
+    }
 
-  &__site {
-    @extend .p-figure-card__cards;
-    top: 45px;
-    left: 325px;
-    z-index: 800;
-  }
+    &__site {
+        @extend .p-figure-card__cards;
+        top: 45px;
+        left: 325px;
+        z-index: 800;
+    }
 
-  &__server {
-    @extend .p-figure-card__cards;
-    top: 160px;
-    left: 325px;
-    z-index: 800;
-  }
+    &__server {
+        @extend .p-figure-card__cards;
+        top: 160px;
+        left: 325px;
+        z-index: 800;
+    }
 
-  &__replay {
-    display: block;
-    position: absolute;
-    right: 7px;
-    top: 389px;
-    width: 112px;
-    height: 20px;
-    z-index: 2500;
-    cursor: pointer;
-  }
+    &__replay {
+        display: block;
+        position: absolute;
+        right: 7px;
+        top: 389px;
+        width: 112px;
+        height: 20px;
+        z-index: 2500;
+        cursor: pointer;
+    }
 }
