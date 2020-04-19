@@ -9,6 +9,7 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "public/js"),
     },
+    devtool: "cheap-module-eval-source-map",
     module: {
         rules: [
             {
@@ -19,7 +20,17 @@ module.exports = {
                         loader: "babel-loader",
                         options: {
                             presets: [
-                                ["@babel/preset-env", { modules: false }],
+                                [
+                                    "@babel/env",
+                                    {
+                                        targets: {
+                                            ie: "11",
+                                        },
+                                        useBuiltIns: "usage",
+                                        corejs: 3,
+                                        debug: true,
+                                    },
+                                ],
                             ],
                         },
                     },

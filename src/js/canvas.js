@@ -1,5 +1,5 @@
 import $ from "jquery";
-import * as THREE from "three";
+import * as THREE from "./three.module";
 
 //init
 
