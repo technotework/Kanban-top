@@ -42,7 +42,7 @@
     },
     "dependencies": {
         "core-js": "^3.6.5",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "regenerator-runtime": "^0.13.5",
         "slick-carousel": "^1.8.1",
         "spiritjs": "^3.0.3",
